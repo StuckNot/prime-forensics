@@ -28,6 +28,12 @@ WordPress is heavily reliant on databases. We cannot hit WordPress for every use
 - Every single URL needs a defined canonical tag. Next.js handles this mostly via `metadataBase`, but if you ever have parameters (e.g., `?category=forensics`), ensure the canonical URL points strictly back to the clean root slug.
 - **Trailing Slashes**: Enforce strict trailing slash rules. Google views `/services` and `/services/` as two different pages. We recommend setting `"trailingSlash": false` in `next.config.ts`.
 
-## 5. Rich Content Parsing
-- **MDX / HTML Conversion**: The content coming from WordPress will likely be raw HTML or GraphQL blocks. Ensure that when rendering this text on Next.js, it translates into pure, semantic HTML `<h1>`, `<h2>`, `<article>`, and `<figure>` tags, not random `<div>` wrappers.
-- **Internal Linking**: Internal links are critical. Any time a service is mentioned in a blog post, it should link back to the service page. Use the Next.js `<Link>` component strictly. Never use bare `<a>` tags for internal routing, as they kill the Single Page Application navigation and hurt perceived performance.
+## 5. Rich Content Parsing (Why we sometimes still need HTML)
+Even in a headless setup where we fetch structured data (like `{ title: "Post Name", thumbnail: "url" }`), the actual *body content* of a blog post is usually authored in a rich text editor (like Gutenberg or TipTap). 
+
+Because authors are applying headings, lists, bold text, and inline images within the WordPress editor, the CMS must serialize that content as an HTML string (or sometimes Gutenberg blocks/Markdown) and send it across the API. 
+
+**Best Practice for Blog Bodies**: 
+You shouldn't just inject that raw HTML string directly using `dangerouslySetInnerHTML`. Instead, use a parser like `html-react-parser` or `next-mdx-remote` to intercept the incoming HTML string.
+- *Example*: When the parser sees an `<img src="...">` inside the WordPress HTML string, you swap it out with a highly optimized Next.js `<Image>` component.
+- When it sees an `<a>` tag pointing to an internal service page, you swap it for a Next.js `<Link>` component for instant client-side routing.
