@@ -45,16 +45,25 @@ export default function Navbar() {
         </div>
 
         {/* CTA Button */}
-        <Button
+        {/* <Button
           href="/emergency"
           bgColor="bg-accent"
           textColor="text-primary"
           hoverBg="hover:brightness-110"
-          className="text-sm px-5 py-2 hidden sm:flex font-bold"
+          className="text-xs sm:text-sm px-3 sm:px-5 py-2 w-full sm:w-auto flex justify-center font-bold"
         >
           ⚠ EMERGENCY RESPONSE
+        </Button> */}
+        <Button
+          href="/emergency"
+          bgColor="bg-accent"
+          textColor="text-primary"
+          hoverBg="hover:bg-red-600"
+          className="p-2 rounded-full sm:px-5 sm:py-2 flex items-center justify-center"
+        >
+          ⚠
+          <span className="hidden sm:inline ml-2">EMERGENCY RESPONSE</span>
         </Button>
-
       </nav>
     </header>
   );
