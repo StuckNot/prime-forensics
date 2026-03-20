@@ -2,7 +2,7 @@ import Button from "./ui/Button";
 
 export default function ExpertOpinionCTA() {
   return (
-    <section className="bg-[#182B45] py-24 px-6">
+    <section className="bg-primary dark:bg-base py-24 px-6 border-y border-secondary/20">
       <div className="max-w-5xl mx-auto text-center">
 
         {/* Heading */}
@@ -11,7 +11,7 @@ export default function ExpertOpinionCTA() {
         </h2>
 
         {/* Subtext */}
-        <p className="text-gray-300 text-lg max-w-3xl mx-auto mb-10">
+        <p className="text-white/80 text-lg max-w-3xl mx-auto mb-10">
           Our reports are detailed, scientifically backed, and prepared to
           withstand cross-examination.
         </p>
@@ -21,9 +21,10 @@ export default function ExpertOpinionCTA() {
 
           <Button
             href="/consultation"
-            bgColor="bg-[#C8A25B]"
-            textColor="text-[#182B45]"
-            hoverBg="hover:bg-[#d4b170]"
+            bgColor="bg-accent"
+            textColor="text-primary"
+            hoverBg="hover:brightness-110"
+            className="font-bold"
           >
             Schedule a Consultation
           </Button>
@@ -33,8 +34,8 @@ export default function ExpertOpinionCTA() {
             variant="outline"
             textColor="text-white"
             hoverBg="hover:bg-white"
-            hoverText="hover:text-[#182B45]"
-            className="border-gray-500"
+            hoverText="hover:text-primary"
+            className="border-white/30 font-medium"
           >
             Download Corporate Brochure
           </Button>

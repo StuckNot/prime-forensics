@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, X, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0f0c09] text-gray-400 border-t border-gray-800">
+    <footer className="bg-primary text-white/70 border-t border-secondary/20">
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
 
         {/* Brand */}
@@ -21,14 +21,14 @@ export default function Footer() {
           <div className="flex gap-3">
             <Link
               href="#"
-              className="p-2 rounded-md bg-gray-800 hover:bg-gray-700 transition"
+              className="p-2 rounded-md bg-white/10 hover:bg-white/20 text-white transition"
             >
               <X size={18} />
             </Link>
 
             <Link
               href="#"
-              className="p-2 rounded-md bg-gray-800 hover:bg-gray-700 transition"
+              className="p-2 rounded-md bg-white/10 hover:bg-white/20 text-white transition"
             >
               <Linkedin size={18} />
             </Link>
@@ -65,10 +65,10 @@ export default function Footer() {
         <div>
           <h3 className="text-white font-semibold mb-4">CONTACT US</h3>
 
-          <ul className="space-y-4 text-sm">
+          <ul className="space-y-4 text-sm text-white/80">
 
             <li className="flex gap-3">
-              <MapPin size={18} className="mt-1 text-yellow-500" />
+              <MapPin size={18} className="mt-1 text-accent" />
               <span>
                 Level 4, Science & Tech Park,
                 <br />
@@ -77,12 +77,12 @@ export default function Footer() {
             </li>
 
             <li className="flex gap-3 items-center">
-              <Phone size={18} className="text-yellow-500" />
+              <Phone size={18} className="text-accent" />
               <span>+91 98765 43210</span>
             </li>
 
             <li className="flex gap-3 items-center">
-              <Mail size={18} className="text-yellow-500" />
+              <Mail size={18} className="text-accent" />
               <span>lab@primeforensics.in</span>
             </li>
 
@@ -93,8 +93,8 @@ export default function Footer() {
 
       {/* Bottom Bar */}
 
-      <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 gap-3">
+      <div className="border-t border-secondary/20 mt-8">
+        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center text-sm text-white/50 gap-3">
 
           <p>
             © {new Date().getFullYear()} Prime Forensics & Investigative Services. All rights reserved.

@@ -44,7 +44,7 @@ export default function Accreditations() {
   ];
 
   return (
-    <section className="bg-white border-y border-secondary/10 py-12">
+    <section className="bg-base border-y border-secondary/10 py-12">
       <div className="container mx-auto px-6">
         <h4 className="text-center text-[10px] font-bold tracking-[0.2em] text-typography/40 uppercase mb-8">
           ACCREDITED & RECOGNIZED BY
@@ -52,12 +52,12 @@ export default function Accreditations() {
         
         <div className="flex flex-wrap justify-center md:justify-between items-center gap-8 md:gap-4 max-w-5xl mx-auto">
           {accreditations.map((item, index) => (
-            <div key={index} className="flex items-center gap-3 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
-              <div className="text-primary">
+            <div key={index} className="flex items-center gap-3 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 dark:opacity-40 dark:hover:opacity-100 transition-all duration-300">
+              <div className="text-primary dark:text-accent">
                 {item.icon}
               </div>
               <div className="flex flex-col">
-                <span className="font-serif font-bold text-primary text-sm tracking-wide">
+                <span className="font-serif font-bold text-primary dark:text-white text-sm tracking-wide">
                   {item.title}
                 </span>
                 <span className="text-[10px] text-typography/60 uppercase tracking-wider">

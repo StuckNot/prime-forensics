@@ -4,19 +4,19 @@ import { CheckCircle2, ShieldCheck } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-base pt-20 pb-32 overflow-hidden">
+    <section className="relative bg-base pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-secondary/10 to-transparent rounded-bl-[100px] -z-10 blur-3xl" />
       
-      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center lg:items-start xl:items-center">
         {/* Left Content */}
         <div className="max-w-xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 text-xs font-semibold tracking-widest text-primary uppercase mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 text-xs font-semibold tracking-widest text-primary dark:text-white uppercase mb-6">
             <div className="w-1.5 h-1.5 rounded-full bg-accent" />
             Gold Standard Forensics
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-serif text-primary leading-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif text-primary dark:text-white leading-tight mb-6 mt-4">
             Scientifically Proven.<br />
             <span className="text-accent">Court Admissible.</span>
           </h1>
@@ -26,7 +26,7 @@ export default function HeroSection() {
           </p>
           
           {/* Expert Profile Badge */}
-          <div className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-secondary/20 mb-10 w-max">
+          <div className="flex items-center gap-4 bg-base md:bg-white dark:bg-primary/20 p-4 rounded-xl shadow-sm border border-secondary/20 mb-10 w-full sm:w-max">
             <div className="w-14 h-14 rounded-full bg-primary/10 overflow-hidden relative border-2 border-accent/20">
               {/* Placeholder for Expert Photo */}
               <div className="w-full h-full bg-primary flex items-center justify-center text-white text-xl font-serif">
@@ -37,7 +37,7 @@ export default function HeroSection() {
               <div className="text-[10px] font-bold tracking-wider text-accent uppercase mb-1">
                 LED BY CHIEF EXPERT
               </div>
-              <div className="font-serif font-semibold text-primary text-lg">
+              <div className="font-serif font-semibold text-primary dark:text-white text-lg">
                 Dr. Jaskaran Singh
               </div>
               <div className="text-xs text-typography/70">
@@ -56,7 +56,7 @@ export default function HeroSection() {
             </Link>
             <Link 
               href="/credentials" 
-              className="px-8 py-3.5 rounded-md font-medium border-2 border-primary/20 hover:border-primary text-primary transition-all"
+              className="px-8 py-3.5 rounded-md font-medium border-2 border-primary/20 dark:border-white/20 hover:border-primary dark:hover:border-white text-primary dark:text-white transition-all text-center"
             >
               View Credentials
             </Link>
@@ -69,7 +69,7 @@ export default function HeroSection() {
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl z-0" />
           <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-primary/5 rounded-full blur-3xl z-0" />
           
-          <div className="relative z-10 bg-white rounded-2xl shadow-2xl p-2 border border-secondary/10 transform transition-transform duration-500 hover:-translate-y-2">
+          <div className="relative z-10 bg-base dark:bg-[#0A101D] rounded-2xl shadow-2xl p-2 border border-secondary/10 transform transition-transform duration-500 hover:-translate-y-2">
             <div className="absolute -top-4 -right-4 bg-accent text-white text-xs font-bold px-3 py-1.5 rounded shadow-lg z-20">
               Verified Lab
             </div>
@@ -98,7 +98,7 @@ export default function HeroSection() {
                 <div className="text-[10px] font-bold tracking-widest text-typography/50 uppercase mb-1">
                   SUCCESS RATE
                 </div>
-                <div className="font-serif font-bold text-3xl text-primary">
+                <div className="font-serif font-bold text-3xl text-primary dark:text-white">
                   98.5%
                 </div>
               </div>
@@ -106,7 +106,7 @@ export default function HeroSection() {
                 <div className="text-[10px] font-bold tracking-widest text-typography/50 uppercase mb-1">
                   CASES SOLVED
                 </div>
-                <div className="font-serif font-bold text-3xl text-primary">
+                <div className="font-serif font-bold text-3xl text-primary dark:text-white">
                   1,200+
                 </div>
               </div>
