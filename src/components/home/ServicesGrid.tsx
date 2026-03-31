@@ -4,7 +4,7 @@ import { ArrowRight, FileSignature, MonitorDot, Shield, Fingerprint, AudioLines,
 
 export default function ServicesGrid() {
   return (
-    <section className="bg-base py-24 border-t border-secondary/10">
+    <section className="bg-background py-24 border-t border-secondary/10">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
@@ -76,29 +76,29 @@ export default function ServicesGrid() {
           </Link>
 
           {/* Card 3: The Forensic Vault */}
-          <div className="relative rounded-2xl overflow-hidden bg-primary md:col-span-1 flex flex-col justify-between p-8 border border-secondary/20 shadow-lg group">
+          <div className=" relative rounded-2xl overflow-hidden bg-primary md:col-span-1 flex flex-col justify-between p-8 border border-secondary/20 shadow-lg group">
             <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -mr-10 -mt-10 transition-opacity group-hover:bg-accent/10" />
             
             <div className="relative z-10">
-               <div className="w-10 h-10 rounded-lg bg-accent text-primary flex items-center justify-center mb-6">
+               <div className="w-10 h-10 rounded-lg bg-accent text-primary flex items-center justify-center mb-4">
                 <Shield size={20} />
               </div>
-              <h3 className="text-xl font-serif text-white mb-3">The Forensic Vault</h3>
+              <h3 className="text-xl font-serif text-white mb-2">The Forensic Vault</h3>
               <p className="text-white/70 text-sm mb-6">
                 Secure, climate-controlled storage for sensitive evidence. Our vault ensures chain of custody integrity for physical and digital assets, accessible only to authorized personnel.
               </p>
               
-              <ul className="space-y-2 mb-8">
+              {/* <ul className="space-y-2 mb-8">
                 {['24/7 Biometric Security', 'Fire & Waterproof', 'Automated Logging'].map((feature, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-accent/90">
                     <CheckCircle2 size={16} />
                     <span>{feature}</span>
                   </li>
                 ))}
-              </ul>
+              </ul> */}
             </div>
             
-            <button className="relative z-10 w-full py-3 px-4 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-bold tracking-wider uppercase transition-colors">
+            <button className="relative z-10 w-full py-2 px-3 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-bold tracking-wider uppercase transition-colors">
               Access Protocols
             </button>
           </div>
@@ -124,7 +124,7 @@ export default function ServicesGrid() {
           </Link>
 
           {/* Card 5: Audio/Video Authentication */}
-          <Link href="/services/media-authentication" className="group relative rounded-2xl overflow-hidden md:col-span-1 bg-base dark:bg-[#0A101D] border border-secondary/20 shadow-sm flex items-center justify-center text-center p-8 hover:shadow-md transition-shadow">
+          <Link href="/services/media-authentication" className="group relative rounded-2xl overflow-hidden md:col-span-1 bg-background dark:bg-[#0A101D] border border-secondary/20 shadow-sm flex items-center justify-center text-center p-8 hover:shadow-md transition-shadow">
             <div className="flex flex-col items-center">
               <div className="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center mb-6 ring-8 ring-primary/5 group-hover:ring-primary/10 transition-all">
                 <AudioLines size={24} />

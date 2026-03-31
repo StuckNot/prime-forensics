@@ -1,4 +1,4 @@
-import Navbar from "@/src/components/navbar/navbar";
+
 import dynamic from "next/dynamic";
 
 const HeroSection = dynamic(() => import("@/src/components/home/HeroSection"));
@@ -10,7 +10,6 @@ const Footer = dynamic(() => import("@/src/components/footer/footer"));
 export default function Home() {
   return (
     <>
-      <Navbar />
       <HeroSection />
       <Accreditations />
       <ServicesGrid />

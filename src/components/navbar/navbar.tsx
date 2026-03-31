@@ -1,16 +1,20 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Button from "../ui/Button";
 
 const navLinks = [
-  { name: "Services", href: "/services" },
-  { name: "Expert Witness", href: "/expert-witness" },
-  { name: "Lab Certifications", href: "/lab-certifications" },
   { name: "About Us", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Contact Us", href: "/contact" },
+  // { name: "Expert Witness", href: "/expert-witness" },
+  { name: "Career", href: "/career" },
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
+
   return (
     <header className="w-full bg-primary border-b border-secondary/20">
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -22,7 +26,7 @@ export default function Navbar() {
           </div>
 
           <div className="leading-tight">
-            <p className="text-white font-semibold tracking-wide text-lg">
+            <p className="text-white font-semibold font-serif tracking-wide text-lg">
               PRIME<span className="text-accent">FORENSICS</span>
             </p>
             <p className="text-xs text-white/50 tracking-widest">
@@ -32,16 +36,23 @@ export default function Navbar() {
         </Link>
 
         {/* Navigation */}
-        <div className="hidden md:flex items-center gap-8 text-sm text-white/70">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="hover:text-white transition"
-            >
-              {link.name}
-            </Link>
-          ))}
+        <div className="hidden md:flex mr-12 items-center gap-12 text-sm font-medium">
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={`transition-all duration-300 py-1 ${
+                  isActive
+                    ? "text-accent border-b-2 border-accent"
+                    : "text-white/70 hover:text-white border-b-2 border-transparent"
+                }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </div>
 
         {/* CTA Button */}
@@ -54,7 +65,7 @@ export default function Navbar() {
         >
           ⚠ EMERGENCY RESPONSE
         </Button> */}
-        <Button
+        {/* <Button
           href="/emergency"
           bgColor="bg-accent"
           textColor="text-primary"
@@ -63,7 +74,7 @@ export default function Navbar() {
         >
           ⚠
           <span className="hidden sm:inline ml-2">EMERGENCY RESPONSE</span>
-        </Button>
+        </Button> */}
       </nav>
     </header>
   );
