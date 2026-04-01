@@ -2,34 +2,36 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, FileSignature, MonitorDot, Shield, Fingerprint, AudioLines, CheckCircle2 } from "lucide-react";
 
-export default function ServicesGrid() {
+export default function ServicesGrid({ hideHeader = false }: { hideHeader?: boolean }) {
   return (
     <section className="bg-background py-24 border-t border-secondary/10">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <div className="max-w-2xl">
-            <h2 className="text-4xl font-serif text-primary dark:text-white mb-4">
-              Specialized Investigative Solutions
-            </h2>
-            <p className="text-typography/80 text-lg">
-              Comprehensive forensic analysis for legal entities, corporations, and private individuals.
-            </p>
+        {!hideHeader && (
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div className="max-w-2xl">
+              <h2 className="text-4xl font-serif text-primary dark:text-white mb-4">
+                Specialized Investigative Solutions
+              </h2>
+              <p className="text-typography/80 text-lg">
+                Comprehensive forensic analysis for legal entities, corporations, and private individuals.
+              </p>
+            </div>
+            <Link 
+              href="/services" 
+              className="group flex items-center gap-2 text-accent font-semibold hover:text-accent/80 transition-colors"
+            >
+              View All Services
+              <ArrowRight size={18} className="transform group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
-          <Link 
-            href="/services" 
-            className="group flex items-center gap-2 text-accent font-semibold hover:text-accent/80 transition-colors"
-          >
-            View All Services
-            <ArrowRight size={18} className="transform group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </div>
+        )}
 
         {/* Bento Grid layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[280px]">
           
           {/* Card 1: Questioned Document */}
-          <Link href="/services/document-examination" className="group relative rounded-2xl overflow-hidden md:col-span-2 lg:col-span-2 bg-primary flex items-end">
+          <Link href="/services/questioned-documents" className="group relative rounded-2xl overflow-hidden md:col-span-2 lg:col-span-2 bg-primary flex items-end">
             <Image 
               src="/images/document-forensics.png" 
               alt="Questioned Document Examination" 
@@ -76,7 +78,7 @@ export default function ServicesGrid() {
           </Link>
 
           {/* Card 3: The Forensic Vault */}
-          <div className=" relative rounded-2xl overflow-hidden bg-primary md:col-span-1 flex flex-col justify-between p-8 border border-secondary/20 shadow-lg group">
+          <Link href="/services/forensic-vault" className=" relative rounded-2xl overflow-hidden bg-primary md:col-span-1 flex flex-col justify-between p-8 border border-secondary/20 shadow-lg group">
             <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -mr-10 -mt-10 transition-opacity group-hover:bg-accent/10" />
             
             <div className="relative z-10">
@@ -98,10 +100,10 @@ export default function ServicesGrid() {
               </ul> */}
             </div>
             
-            <button className="relative z-10 w-full py-2 px-3 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-bold tracking-wider uppercase transition-colors">
+            <div className="relative z-10 w-full py-2 px-3 rounded-lg flex items-center justify-center bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-bold tracking-wider uppercase transition-colors">
               Access Protocols
-            </button>
-          </div>
+            </div>
+          </Link>
 
           {/* Card 4: Fraud & Forgery Detection */}
           <Link href="/services/fraud-detection" className="group relative rounded-2xl overflow-hidden md:col-span-1 bg-primary flex items-end">
@@ -124,7 +126,7 @@ export default function ServicesGrid() {
           </Link>
 
           {/* Card 5: Audio/Video Authentication */}
-          <Link href="/services/media-authentication" className="group relative rounded-2xl overflow-hidden md:col-span-1 bg-background dark:bg-primary/50 border border-secondary/20 shadow-sm flex items-center justify-center text-center p-8 hover:shadow-md transition-shadow">
+          <Link href="/services/media-authentication" className="group relative rounded-2xl overflow-hidden md:col-span-1 bg-background dark:bg-[#0A101D] border border-secondary/20 shadow-sm flex items-center justify-center text-center p-8 hover:shadow-md transition-shadow">
             <div className="flex flex-col items-center">
               <div className="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center mb-6 ring-8 ring-primary/5 group-hover:ring-primary/10 transition-all">
                 <AudioLines size={24} />

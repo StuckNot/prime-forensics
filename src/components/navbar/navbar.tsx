@@ -1,15 +1,17 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Button from "../ui/Button";
 
 const navLinks = [
   { name: "About Us", href: "/about" },
   { name: "Services", href: "/services" },
+  { name: "Gallery", href: "/gallery" },
   { name: "Contact Us", href: "/contact" },
   // { name: "Expert Witness", href: "/expert-witness" },
-  { name: "Career", href: "/career" },
+  { name: "Careers", href: "/careers" },
 ];
 
 export default function Navbar() {
@@ -20,16 +22,21 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3">
-          <div className="w-9 h-9 bg-accent rounded flex items-center justify-center text-primary font-bold">
-            🔬
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="relative w-11 h-11 flex items-center justify-center transform group-hover:scale-105 transition-transform">
+            <Image 
+              src="/images/logo-icon.png" 
+              alt="Prime Forensics Logo" 
+              fill
+              className="object-contain drop-shadow-[0_0_8px_rgba(255,215,0,0.3)]"
+            />
           </div>
 
           <div className="leading-tight">
             <p className="text-white font-semibold font-serif tracking-wide text-lg">
               PRIME<span className="text-accent">FORENSICS</span>
             </p>
-            <p className="text-xs text-white/50 tracking-widest">
+            <p className="text-[10px] text-white/50 tracking-widest font-bold">
               INVESTIGATIVE SERVICES
             </p>
           </div>
