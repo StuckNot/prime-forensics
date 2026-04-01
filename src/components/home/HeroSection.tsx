@@ -60,37 +60,41 @@ const [openPartner, setOpenPartner] = useState(false);
 
             { openExpert && (
               <div
-                className="fixed inset-0 z-50 flex items-center justify-center bg-black/75"
+                className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-md p-4 animate-in fade-in duration-300"
                 onClick={() => setOpenExpert(false)}
               >
                 <div
-                  className="bg-background p-10 rounded-lg shadow-lg"
+                  className="bg-background dark:bg-[#0A101D] border border-accent/20 p-8 md:p-10 rounded-2xl shadow-2xl max-w-xl w-full relative transform scale-100 transition-all pointer-events-auto"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <div className="font-serif text-[25px] font-semibold text-accent dark:text-white text-lg whitespace-nowrap">
-                    Dr. Jaskaran Singh <br />
-
-                  </div>
-                  <div className="text-s text-accent text-typography leading-relaxed font-Arial ">
-                    Internationally Renowned Forensic Expert<br />
-                    Ph.D. Forensic Science
-                    (INSPIRE FELLOWSHIP, DST, Ministry of Science & Tech - Govt of India)
-                  </div>
-                  <div className="text-s text-typography leading-relaxed font-Helvetica ">
-                    M.Sc. Forensic Science (Gold Medalist)<br />
-                    B.Sc. Forensic Science (Silver Medalist)
-                  </div>
-                  <div className="text-s text-black text-typography leading-relaxed font-sans-serif">
-                    Resource person & Trainer to National, International Law
-                    Enforcement Officers
-                  </div>
-
-                  <button
-                    className="mt-4 bg-primary text-white rounded-lg px-4 py-2"
+                  <button 
+                    className="absolute top-4 right-4 p-2 text-typography/50 hover:text-accent bg-secondary/10 rounded-full transition-colors"
                     onClick={() => setOpenExpert(false)}
                   >
-                    Close
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                   </button>
+
+                  <div className="flex items-center gap-4 mb-6 border-b border-secondary/20 pb-6">
+                    <div className="w-16 h-16 rounded-full border-2 border-accent/30 flex items-center justify-center text-white text-2xl font-serif bg-primary">JS</div>
+                    <div>
+                      <div className="font-serif text-2xl font-bold text-primary dark:text-white">Dr. Jaskaran Singh</div>
+                      <div className="text-[10px] font-bold tracking-widest text-accent uppercase mt-1">Chief Expert</div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="flex flex-col gap-1">
+                      <span className="text-primary dark:text-white font-semibold">Internationally Renowned Forensic Expert</span>
+                      <span className="text-sm text-typography/70 font-light">Ph.D. Forensic Science (INSPIRE FELLOWSHIP, DST, Ministry of Science & Tech - Govt of India)</span>
+                    </div>
+                    <div className="flex flex-col gap-2 mt-2">
+                      <span className="text-primary dark:text-white font-medium flex items-center gap-3">M.Sc. Forensic Science <span className="text-yellow-600 dark:text-yellow-400 text-[10px] px-2 py-0.5 bg-yellow-500/10 border border-yellow-500/20 rounded-full uppercase tracking-wider font-bold">Gold Medalist</span></span>
+                      <span className="text-primary dark:text-white font-medium flex items-center gap-3">B.Sc. Forensic Science <span className="text-slate-500 dark:text-slate-300 text-[10px] px-2 py-0.5 bg-slate-500/10 border border-slate-500/20 rounded-full uppercase tracking-wider font-bold">Silver Medalist</span></span>
+                    </div>
+                    <div className="pt-4 mt-2 border-t border-secondary/20 text-sm text-typography/80 italic">
+                      "Resource person & Trainer to National and International Law Enforcement Officers."
+                    </div>
+                  </div>
                 </div>
               </div>
             )}
@@ -116,41 +120,45 @@ const [openPartner, setOpenPartner] = useState(false);
                   UGC-NET and FACT Qualified
                 </div> */}
               </div>
-            </div>
-          </div>
-          {openPartner && (
+            {openPartner && (
               <div
-                className="fixed inset-0 z-50 flex items-center justify-center bg-black/75"
+                className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-md p-4 animate-in fade-in duration-300"
                 onClick={() => setOpenPartner(false)}
               >
                 <div
-                  className="bg-background p-10 rounded-lg shadow-lg"
+                  className="bg-background dark:bg-[#0A101D] border border-accent/20 p-8 md:p-10 rounded-2xl shadow-2xl max-w-xl w-full relative transform scale-100 transition-all pointer-events-auto"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <div className="font-serif text-[25px] font-semibold text-accent dark:text-white text-lg whitespace-nowrap">
-                    Mr. Sahil Sharma
-                    <br />
-
-                  </div>
-                  <div className="text-s text-accent text-typography leading-relaxed font-Arial ">
-                    M.Sc. Forensic Science
-                  </div>
-                  <div className="text-s text-typography leading-relaxed font-Helvetica ">
-                    B.Sc. Forensic Science
-                  </div>
-                  <div className="text-s text-black text-typography leading-relaxed font-sans-serif">
-                   UGC-NET & FACT Qualified
-                  </div>
-
-                  <button
-                    className="mt-4 bg-primary text-white rounded-lg px-4 py-2"
+                  <button 
+                    className="absolute top-4 right-4 p-2 text-typography/50 hover:text-accent bg-secondary/10 rounded-full transition-colors"
                     onClick={() => setOpenPartner(false)}
                   >
-                    Close
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                   </button>
+
+                  <div className="flex items-center gap-4 mb-6 border-b border-secondary/20 pb-6">
+                    <div className="w-16 h-16 rounded-full border-2 border-accent/30 flex items-center justify-center text-white text-2xl font-serif bg-accent">SS</div>
+                    <div>
+                      <div className="font-serif text-2xl font-bold text-primary dark:text-white">Mr. Sahil Sharma</div>
+                      <div className="text-[10px] font-bold tracking-widest text-accent uppercase mt-1">Managing Partner</div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="flex flex-col gap-1">
+                      <span className="text-primary dark:text-white font-semibold">Post-Graduate Scientific Credentials</span>
+                      <span className="text-sm text-typography/70 font-light">M.Sc. Forensic Science<br />B.Sc. Forensic Science</span>
+                    </div>
+                    <div className="flex flex-col gap-3 mt-4">
+                       <span className="text-primary dark:text-white font-medium flex items-center gap-3">UGC-NET Qualified</span>
+                       <span className="text-primary dark:text-white font-medium flex items-center gap-3">FACT Qualified</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             )}
+            </div>
+          </div>
 
 
           {/* <div className="flex items-center gap-4 bg-base md:bg-white dark:bg-primary/20 p-4 rounded-xl shadow-sm border border-secondary/20 mb-10 w-full sm:w-max">
@@ -196,7 +204,7 @@ const [openPartner, setOpenPartner] = useState(false);
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl z-0" />
           <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-primary/5 rounded-full blur-3xl z-0" />
 
-          <div className="relative z-10 bg-background dark:bg-primary/50 rounded-2xl shadow-2xl p-2 border border-secondary/10 transform transition-transform duration-500 hover:-translate-y-2">
+          <div className="relative z-10 bg-background dark:bg-[#0A101D] rounded-2xl shadow-2xl p-2 border border-secondary/10 transform transition-transform duration-500 hover:-translate-y-2">
             <div className="absolute -top-4 -right-4 bg-accent text-white text-xs font-bold px-3 py-1.5 rounded shadow-lg z-20">
               Verified Lab
             </div>

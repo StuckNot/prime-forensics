@@ -46,25 +46,23 @@ export default function Accreditations() {
   ];
 
   return (
-    <section className="bg-white border-y border-secondary/10 py-8 dark:bg-primary/50">
-      <div className="container mx-auto px-6">
-        <h4 className="text-center text-[12px] opacity-65 font-bold traxcking-[0.2em] text-typography uppercase mb-8">
+    <section className="bg-secondary/5 border-y border-secondary/20 py-12 relative overflow-hidden">
+      <div className="container mx-auto px-6 relative z-10">
+        <h4 className="text-center text-xs opacity-65 font-bold tracking-[0.2em] text-typography uppercase mb-10">
           ACCREDITED & RECOGNIZED BY
         </h4>
         
         <div className="flex flex-wrap justify-center md:justify-between items-center gap-8 md:gap-4 max-w-5xl mx-auto">
           {accreditations.map((item, index) => (
-            <div key={index} className="flex items-center gap-3 opacity-85 
-          "
-            >
-              <div className="text-primary dark:text-accent">
+            <div key={index} className="group flex items-center gap-4 cursor-pointer hover:-translate-y-1 transition-transform duration-300">
+              <div className="text-primary dark:text-white/60 group-hover:text-accent transition-colors bg-background dark:bg-[#0A101D] p-3 rounded-xl border border-secondary/20 group-hover:border-accent/30 shadow-sm group-hover:shadow-md">
                 {item.icon}
               </div>
               <div className="flex flex-col">
-                <span className=" text-[16px] font-serif font-bold text-typography dark:text-white text-sm tracking-wide">
+                <span className="text-lg font-serif font-bold text-typography dark:text-white tracking-wide group-hover:text-accent transition-colors">
                   {item.title}
                 </span>
-                <span className="text-[12px] text-typography opacity-60 uppercase tracking-wider">
+                <span className="text-[10px] text-typography/60 font-bold uppercase tracking-widest">
                   {item.subtitle}
                 </span>
               </div>

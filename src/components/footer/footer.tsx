@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Mail, X, Linkedin } from "lucide-react";
 
 export default function Footer() {
@@ -8,9 +9,19 @@ export default function Footer() {
 
         {/* Brand */}
         <div>
-          <h2 className="text-white text-xl font-semibold tracking-wide mb-4">
-            PRIME FORENSICS
-          </h2>
+          <div className="flex flex-col gap-3 mb-6">
+            <div className="relative w-16 h-16">
+              <Image 
+                src="/images/logo-icon.png" 
+                alt="Prime Forensics Logo" 
+                fill
+                className="object-contain drop-shadow-[0_0_8px_rgba(255,215,0,0.1)]"
+              />
+            </div>
+            <h2 className="text-white text-xl font-serif font-bold tracking-wide leading-tight">
+              PRIME<br/><span className="text-accent text-sm tracking-widest">FORENSICS</span>
+            </h2>
+          </div>
 
           <p className="text-sm leading-relaxed mb-6">
             Delivering truth through science. India's premier private forensic
@@ -40,11 +51,11 @@ export default function Footer() {
           <h3 className="text-white font-semibold mb-4">SERVICES</h3>
 
           <ul className="space-y-3 text-sm">
-            <li><Link href="/services/questioned-documents" className="hover:text-white transition">Questioned Documents</Link></li>
-            <li><Link href="/services/cyber-forensics" className="hover:text-white transition">Cyber Forensics</Link></li>
-            <li><Link href="/services/fingerprint-analysis" className="hover:text-white transition">Fingerprint Analysis</Link></li>
-            <li><Link href="/services/audio-video" className="hover:text-white transition">Audio/Video Forensics</Link></li>
-            <li><Link href="/services/dna-consulting" className="hover:text-white transition">DNA Consulting</Link></li>
+            <li><Link href="/services/questioned-documents" className="hover:text-white transition">Questioned Document Examination</Link></li>
+            <li><Link href="/services/digital-forensics" className="hover:text-white transition">Digital & Cyber Forensics</Link></li>
+            <li><Link href="/services/forensic-vault" className="hover:text-white transition">The Forensic Vault</Link></li>
+            <li><Link href="/services/fraud-detection" className="hover:text-white transition">Fraud & Forgery Detection</Link></li>
+            <li><Link href="/services/media-authentication" className="hover:text-white transition">Audio/Video Authentication</Link></li>
           </ul>
         </div>
 
@@ -53,7 +64,8 @@ export default function Footer() {
           <h3 className="text-white font-semibold mb-4">COMPANY</h3>
 
           <ul className="space-y-3 text-sm">
-            <li><Link href="/about" className="hover:text-white transition">About Dr. Singh</Link></li>
+            <li><Link href="/about" className="hover:text-white transition">About Us</Link></li>
+            <li><Link href="/gallery" className="hover:text-white transition">Gallery</Link></li>
             <li><Link href="/certifications" className="hover:text-white transition">Certifications</Link></li>
             <li><Link href="/careers" className="hover:text-white transition">Careers</Link></li>
             <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>

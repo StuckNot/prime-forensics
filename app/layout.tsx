@@ -53,6 +53,8 @@ const jsonLd = {
   url: siteUrl,
 };
 
+import Breadcrumbs from "@/src/components/ui/Breadcrumbs";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -67,9 +69,10 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} antialiased text-typography bg-base`}
+        className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} antialiased text-typography bg-base relative`}
       >
         <Navbar />
+        <Breadcrumbs />
         <main className="min-h-screen flex flex-col">
           {children}
         </main>
