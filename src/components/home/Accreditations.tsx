@@ -46,7 +46,7 @@ export default function Accreditations() {
   ];
 
   return (
-    <section className="bg-white border-y border-secondary/10 py-8">
+    <section className="bg-white border-y border-secondary/10 py-8 dark:bg-primary/50">
       <div className="container mx-auto px-6">
         <h4 className="text-center text-[12px] opacity-65 font-bold traxcking-[0.2em] text-typography uppercase mb-8">
           ACCREDITED & RECOGNIZED BY

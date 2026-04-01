@@ -116,7 +116,9 @@ const [openPartner, setOpenPartner] = useState(false);
                   UGC-NET and FACT Qualified
                 </div> */}
               </div>
-            {openPartner && (
+            </div>
+          </div>
+          {openPartner && (
               <div
                 className="fixed inset-0 z-50 flex items-center justify-center bg-black/75"
                 onClick={() => setOpenPartner(false)}
@@ -149,8 +151,6 @@ const [openPartner, setOpenPartner] = useState(false);
                 </div>
               </div>
             )}
-            </div>
-          </div>
 
 
           {/* <div className="flex items-center gap-4 bg-base md:bg-white dark:bg-primary/20 p-4 rounded-xl shadow-sm border border-secondary/20 mb-10 w-full sm:w-max">
@@ -196,7 +196,7 @@ const [openPartner, setOpenPartner] = useState(false);
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl z-0" />
           <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-primary/5 rounded-full blur-3xl z-0" />
 
-          <div className="relative z-10 bg-background dark:bg-[#0A101D] rounded-2xl shadow-2xl p-2 border border-secondary/10 transform transition-transform duration-500 hover:-translate-y-2">
+          <div className="relative z-10 bg-background dark:bg-primary/50 rounded-2xl shadow-2xl p-2 border border-secondary/10 transform transition-transform duration-500 hover:-translate-y-2">
             <div className="absolute -top-4 -right-4 bg-accent text-white text-xs font-bold px-3 py-1.5 rounded shadow-lg z-20">
               Verified Lab
             </div>

@@ -2,7 +2,7 @@ import Button from "./ui/Button";
 
 export default function ExpertOpinionCTA() {
   return (
-    <section className="bg-primary dark:bg-base py-24 px-6 border-y border-secondary/20">
+    <section className="bg-primary dark:bg-primary/50 py-24 px-6 border-y border-secondary/20">
       <div className="max-w-5xl mx-auto text-center">
 
         {/* Heading */}
