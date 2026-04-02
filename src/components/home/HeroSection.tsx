@@ -64,7 +64,7 @@ const [openPartner, setOpenPartner] = useState(false);
                 onClick={() => setOpenExpert(false)}
               >
                 <div
-                  className="bg-background dark:bg-[#0A101D] border border-accent/20 p-8 md:p-10 rounded-2xl shadow-2xl max-w-xl w-full relative transform scale-100 transition-all pointer-events-auto"
+                  className="bg-background dark:bg-[#0A101D] border border-accent/20 p-5 md:p-10 rounded-2xl shadow-2xl max-w-xl w-full relative transform scale-100 transition-all pointer-events-auto"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <button 
@@ -120,13 +120,15 @@ const [openPartner, setOpenPartner] = useState(false);
                   UGC-NET and FACT Qualified
                 </div> */}
               </div>
-            {openPartner && (
+            </div>
+          </div>
+          {openPartner && (
               <div
                 className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-md p-4 animate-in fade-in duration-300"
                 onClick={() => setOpenPartner(false)}
               >
                 <div
-                  className="bg-background dark:bg-[#0A101D] border border-accent/20 p-8 md:p-10 rounded-2xl shadow-2xl max-w-xl w-full relative transform scale-100 transition-all pointer-events-auto"
+                  className="bg-background dark:bg-[#0A101D] border border-accent/20 p-5 md:p-10 rounded-2xl shadow-2xl max-w-xl w-full relative transform scale-100 transition-all pointer-events-auto"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <button 
@@ -157,8 +159,6 @@ const [openPartner, setOpenPartner] = useState(false);
                 </div>
               </div>
             )}
-            </div>
-          </div>
 
 
           {/* <div className="flex items-center gap-4 bg-base md:bg-white dark:bg-primary/20 p-4 rounded-xl shadow-sm border border-secondary/20 mb-10 w-full sm:w-max">

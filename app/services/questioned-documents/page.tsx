@@ -83,8 +83,8 @@ export default function QuestionedDocumentsPage() {
               <Image 
                 src="/images/qde-face.png" 
                 alt="Forensic Factor Analysis" 
-                fill 
-                className="object-cover object-top filter grayscale contrast-125 opacity-90 mix-blend-screen"
+                fill={true}
+                className="object-cover object-center filter grayscale contrast-125 opacity-90 mix-blend-screen"
               />
             </div>
           </div>
