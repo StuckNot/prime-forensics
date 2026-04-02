@@ -52,7 +52,7 @@ export default function Accreditations() {
           ACCREDITED & RECOGNIZED BY
         </h4>
         
-        <div className="flex flex-wrap justify-center md:justify-between items-center gap-8 md:gap-4 max-w-5xl mx-auto">
+        <div className="flex flex-wrap justify-between md:justify-between items-center gap-8 md:gap-4 max-w-5xl mx-auto">
           {accreditations.map((item, index) => (
             <div key={index} className="group flex items-center gap-4 cursor-pointer hover:-translate-y-1 transition-transform duration-300">
               <div className="text-primary dark:text-white/60 group-hover:text-accent transition-colors bg-background dark:bg-[#0A101D] p-3 rounded-xl border border-secondary/20 group-hover:border-accent/30 shadow-sm group-hover:shadow-md">

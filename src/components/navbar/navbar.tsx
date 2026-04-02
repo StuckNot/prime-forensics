@@ -4,6 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Button from "../ui/Button";
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+
 
 const navLinks = [
   { name: "About Us", href: "/about" },
@@ -16,17 +19,21 @@ const navLinks = [
 
 export default function Navbar() {
   const pathname = usePathname();
-
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  // Close the mobile menu whenever the route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
   return (
-    <header className="w-full bg-primary border-b border-secondary/20">
+    <header className="w-full relative z-50 bg-primary border-b border-secondary/20">
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-11 h-11 flex items-center justify-center transform group-hover:scale-105 transition-transform">
-            <Image 
-              src="/images/logo-icon.png" 
-              alt="Prime Forensics Logo" 
+            <Image
+              src="/images/logo-icon.png"
+              alt="Prime Forensics Logo"
               fill
               className="object-contain drop-shadow-[0_0_8px_rgba(255,215,0,0.3)]"
             />
@@ -50,17 +57,22 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`transition-all duration-300 py-1 ${
-                  isActive
-                    ? "text-accent border-b-2 border-accent"
-                    : "text-white/70 hover:text-white border-b-2 border-transparent"
-                }`}
+                className={`transition-all duration-300 py-1 ${isActive
+                  ? "text-accent border-b-2 border-accent"
+                  : "text-white/70 hover:text-white border-b-2 border-transparent"
+                  }`}
               >
                 {link.name}
               </Link>
             );
           })}
         </div>
+        <button
+          className="md:hidden text-white/80 hover:text-white transition-colors"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
 
         {/* CTA Button */}
         {/* <Button
@@ -82,7 +94,28 @@ export default function Navbar() {
           ⚠
           <span className="hidden sm:inline ml-2">EMERGENCY RESPONSE</span>
         </Button> */}
+        {/* Mobile Drawer */}
       </nav>
+      <div
+          className={`absolute top-full left-0 w-full bg-primary border-b border-white/10 md:hidden flex flex-col pt-2 pb-6 px-6 gap-4 shadow-xl transition-all duration-300 origin-top overflow-hidden ${isMobileMenuOpen
+              ? "opacity-100 scale-y-100 pointer-events-auto"
+              : "opacity-0 scale-y-0 pointer-events-none"
+            }`}
+        >
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={`py-3 text-base font-semibold border-b border-white/5 transition-colors ${isActive ? "text-accent" : "text-white/70 hover:text-white hover:border-white/20"
+                  }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
+        </div>
     </header>
   );
 }

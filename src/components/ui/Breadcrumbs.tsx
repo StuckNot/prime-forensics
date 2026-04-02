@@ -22,7 +22,7 @@ export default function Breadcrumbs() {
 
   return (
     <nav className="absolute top-24 left-0 w-full px-6 z-[60] pointer-events-auto">
-      <div className="max-w-7xl mx-auto flex items-center text-[10px] md:text-[11px] font-bold tracking-widest uppercase">
+      <div className="max-w-7xl mx-auto flex items-center text-[10px] md:text-[11px] font-bold tracking-widest uppercase overflow-x-auto whitespace-nowrap scrollbar-hide py-1">
         <Link 
           href="/" 
           className="flex items-center gap-1.5 text-white/50 hover:text-white transition-colors"

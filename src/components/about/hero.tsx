@@ -11,7 +11,7 @@ const Hero = () => {
                     Meticulous & Sovereign
                 </p>
                 
-                <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-8 leading-tight">
+                <h1 className="text-4xl md:text-7xl font-serif font-bold text-white mb-8 leading-tight">
                     Uncompromising<br />
                     <span className="text-white/70 italic font-light">Scientific</span> Integrity.
                 </h1>
