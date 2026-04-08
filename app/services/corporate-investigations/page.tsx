@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function ForensicVaultPage() {
   return (
     <div className="bg-background min-h-screen">
-      
+
       {/* Hero Section */}
       <section className="bg-primary pt-24 pb-16 px-6 relative border-t border-secondary/20 overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-secondary/10 to-transparent z-0 blur-3xl pointer-events-none" />
@@ -38,10 +38,10 @@ export default function ForensicVaultPage() {
 
       {/* Main Content Grid */}
       <div className="container mx-auto px-6 py-24 flex flex-col gap-32">
-        
+
         {/* Section 1: Extraction & Interpretation */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
-          
+
           {/* Left Side: Custody System */}
           <div className="flex flex-col justify-between rounded-2xl border border-secondary/20 bg-background dark:bg-[#0A101D] p-8 lg:p-12 h-full shadow-sm">
             <div>
@@ -53,7 +53,7 @@ export default function ForensicVaultPage() {
                   <Lock size={24} />
                 </div>
               </div>
-              
+
               <p className="text-typography/80 text-lg leading-relaxed mb-10 max-w-lg">
                 The vulnerability of any evidence lies in its transportation and storage. Our localized custody architecture eliminates tampering risks entirely.
               </p>
@@ -80,10 +80,10 @@ export default function ForensicVaultPage() {
 
             {/* Banner Image */}
             <div className="relative w-full h-48 md:h-64 bg-primary rounded-xl overflow-hidden shadow-inner border border-secondary/20">
-              <Image 
-                src="/images/vault-banner.png" 
-                alt="Forensic Vault Evidence Storage" 
-                fill 
+              <Image
+                src="/images/vault-banner.png"
+                alt="Forensic Vault Evidence Storage"
+                fill
                 className="object-cover object-center opacity-90 mix-blend-screen"
               />
             </div>
@@ -97,24 +97,24 @@ export default function ForensicVaultPage() {
                 <ShieldCheck size={28} />
               </div>
               <h3 className="text-4xl lg:text-5xl font-serif text-white mb-8 leading-tight">
-                Absolute<br/>Integrity
+                Absolute<br />Integrity
               </h3>
               <p className="text-white/70 leading-relaxed text-lg max-w-md">
                 Opposing counsel cannot challenge evidence that is maintained in an auditable, highly secure isolation environment. Every log entry is permanently preserved.
               </p>
             </div>
-            
+
             <div className="relative z-10 mt-20 pt-6 border-t border-white/10 flex justify-between items-center text-xs font-bold tracking-widest text-accent uppercase">
               <span>Security Rating</span>
               <span>Maximum Grade</span>
             </div>
           </div>
-          
+
         </div>
 
         {/* Section 2: Technological Arsenal */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
-          
+
           {/* Left Side: Arsenal Info */}
           <div className="flex flex-col justify-center rounded-2xl border border-secondary/20 bg-background dark:bg-[#0A101D] p-8 lg:p-12 h-full order-2 lg:order-1 shadow-sm relative overflow-hidden">
             <h2 className="text-3xl lg:text-4xl font-serif font-bold text-primary dark:text-white mb-8 relative z-10">
@@ -123,7 +123,7 @@ export default function ForensicVaultPage() {
             <p className="text-typography/80 text-lg leading-relaxed mb-12 max-w-lg relative z-10">
               Built beyond standard commercial safety protocols. It operates entirely off the grid and remains impermeable to both natural and human threats.
             </p>
-            
+
             <div className="space-y-10 relative z-10">
               <div className="flex gap-5 items-start">
                 <div className="p-3 w-12 h-12 flex justify-center items-center rounded-lg bg-accent/10 shrink-0 border border-accent/20 text-accent">
@@ -157,10 +157,10 @@ export default function ForensicVaultPage() {
 
           {/* Right Side: Laboratory Environment Image */}
           <div className="relative w-full min-h-[400px] h-full bg-primary rounded-2xl overflow-hidden order-1 lg:order-2 shadow-xl border border-secondary/20 flex items-end">
-            <Image 
-              src="/images/vault-lab.png" 
-              alt="Heavy Steel Forensic Bank Vault" 
-              fill 
+            <Image
+              src="/images/vault-lab.png"
+              alt="Heavy Steel Forensic Bank Vault"
+              fill
               className="object-cover opacity-80 mix-blend-screen"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent" />
@@ -179,9 +179,9 @@ export default function ForensicVaultPage() {
           <p className="text-typography/80 text-lg leading-relaxed mb-12">
             Do not leave high-stakes case files in standard briefcases or digital lockers. Rent encrypted spatial storage at Prime Forensics.
           </p>
-          
-          <Button 
-            href="/contact" 
+
+          <Button
+            href="/contact"
             bgColor="bg-accent"
             textColor="text-primary"
             hoverBg="hover:brightness-110"
@@ -189,7 +189,7 @@ export default function ForensicVaultPage() {
           >
             Access Protocols
           </Button>
-          
+
           <div className="mt-10">
             <p className="text-[10px] md:text-xs tracking-widest text-typography/50 uppercase font-bold">
               Confidentiality Guaranteed • Response Within 24 Hours
