@@ -30,11 +30,11 @@ export default function ServicesGrid({ hideHeader = false }: { hideHeader?: bool
         {/* Bento Grid layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[280px]">
 
-          {/* Card 1: Questioned Document */}
-          <Link href="/services/questioned-documents" className="group relative rounded-2xl overflow-hidden md:col-span-2 lg:col-span-2 bg-primary flex items-end">
+          {/* Card 1: Scientific Analysis */}
+          <Link href="/services/scientific-analysis" className="group relative rounded-2xl overflow-hidden md:col-span-2 lg:col-span-2 bg-primary flex items-end">
             <Image
-              src="/images/document-forensics.png"
-              alt="Questioned Document Examination"
+              src="/images/scientific_main_1775626592719.png"
+              alt="Scientific Forensic Analysis"
               fill
               className="object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
             />
@@ -43,9 +43,9 @@ export default function ServicesGrid({ hideHeader = false }: { hideHeader?: bool
               <div className="w-10 h-10 rounded-lg bg-accent/20 text-accent flex items-center justify-center mb-4">
                 <FileSignature size={20} />
               </div>
-              <h3 className="text-2xl font-serif text-white mb-2">Questioned Document Examination</h3>
+              <h3 className="text-2xl font-serif text-white mb-2">Scientific Forensic Analysis</h3>
               <p className="text-white/80 max-w-lg">
-                Expert handwriting and signature verification for legal disputes involving wills, cheques, and contracts.
+                Delivering scientifically validated, court-admissible forensic opinions to support legal proceedings, investigations, and dispute resolution.
               </p>
             </div>
           </Link>
@@ -53,7 +53,7 @@ export default function ServicesGrid({ hideHeader = false }: { hideHeader?: bool
           {/* Card 2: Digital Forensics */}
           <Link href="/services/digital-forensics" className="group relative rounded-2xl overflow-hidden md:col-span-2 lg:col-span-1 bg-primary flex items-end">
             <Image
-              src="/images/digital-forensics.png"
+              src="/images/digital_cyber_main_1775626551762.png"
               alt="Digital & Cyber Forensics"
               fill
               className="object-cover opacity-40 group-hover:scale-105 transition-transform duration-700"
@@ -72,22 +72,22 @@ export default function ServicesGrid({ hideHeader = false }: { hideHeader?: bool
               </div>
               <h3 className="text-2xl font-serif text-white mb-2">Digital & Cyber Forensics</h3>
               <p className="text-white/70 text-sm">
-                Advanced data recovery, mobile forensics, and email tracking. We provide admissible certification under Section 65B of the Indian Evidence Act.
+                Advanced cyber forensic solutions for investigation, evidence recovery, and legal proceedings.
               </p>
             </div>
           </Link>
 
-          {/* Card 3: The Forensic Vault */}
-          <Link href="/services/forensic-vault" className=" relative rounded-2xl overflow-hidden bg-primary md:col-span-1 flex flex-col justify-between p-8 border border-secondary/20 shadow-lg group">
+          {/* Card 3: Corporate Investigations */}
+          <Link href="/services/corporate-investigations" className=" relative rounded-2xl overflow-hidden bg-primary md:col-span-1 flex flex-col justify-between p-8 border border-secondary/20 shadow-lg group">
             <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -mr-10 -mt-10 transition-opacity group-hover:bg-accent/10" />
 
             <div className="relative z-10">
               <div className="w-10 h-10 rounded-lg bg-accent text-primary flex items-center justify-center mb-4">
                 <Shield size={20} />
               </div>
-              <h3 className="text-xl font-serif text-white mb-2">The Forensic Vault</h3>
+              <h3 className="text-xl font-serif text-white mb-2">Corporate & Private Investigations</h3>
               <p className="text-white/70 text-sm mb-6">
-                Secure, climate-controlled storage for sensitive evidence. Our vault ensures chain of custody integrity for physical and digital assets, accessible only to authorized personnel.
+                Delivering confidential, accurate, and legally compliant investigative solutions for corporates, institutions, and individuals.
               </p>
 
               {/* <ul className="space-y-2 mb-8">
@@ -105,11 +105,11 @@ export default function ServicesGrid({ hideHeader = false }: { hideHeader?: bool
             </div>
           </Link>
 
-          {/* Card 4: Fraud & Forgery Detection */}
-          <Link href="/services/fraud-detection" className="group relative rounded-2xl overflow-hidden md:col-span-1 bg-primary flex items-end">
+          {/* Card 4: Insurance Fraud Detection */}
+          <Link href="/services/insurance-fraud" className="group relative rounded-2xl overflow-hidden md:col-span-1 bg-primary flex items-end">
             <Image
-              src="/images/fingerprint-scan.png"
-              alt="Fraud & Forgery Detection"
+              src="/images/insurance_fraud_main_1775626470092.png"
+              alt="Insurance Fraud Investigation"
               fill
               className="object-cover opacity-60 mix-blend-screen group-hover:scale-110 transition-transform duration-1000"
             />
@@ -118,22 +118,22 @@ export default function ServicesGrid({ hideHeader = false }: { hideHeader?: bool
               <div className="w-10 h-10 rounded-lg bg-accent/20 text-accent flex items-center justify-center mb-4">
                 <Fingerprint size={20} />
               </div>
-              <h3 className="text-xl font-serif text-white mb-2">Fraud & Forgery Detection</h3>
+              <h3 className="text-xl font-serif text-white mb-2">Insurance Fraud Investigation</h3>
               <p className="text-white/70 text-sm">
-                Detection of manipulated financial records, counterfeit currency, and identity theft.
+                Specialized forensic and field investigation services to identify, prevent, and mitigate insurance fraud.
               </p>
             </div>
           </Link>
 
-          {/* Card 5: Audio/Video Authentication */}
-          <Link href="/services/media-authentication" className="group relative rounded-2xl overflow-hidden md:col-span-1 bg-background dark:bg-[#0A101D] border border-secondary/20 shadow-sm flex items-center justify-center text-center p-8 hover:shadow-md transition-shadow">
+          {/* Card 5: Training */}
+          <Link href="/services/training" className="group relative rounded-2xl overflow-hidden md:col-span-1 bg-background dark:bg-[#0A101D] border border-secondary/20 shadow-sm flex items-center justify-center text-center p-8 hover:shadow-md transition-shadow">
             <div className="flex flex-col items-center">
               <div className="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center mb-6 ring-8 ring-primary/5 group-hover:ring-primary/10 transition-all">
                 <AudioLines size={24} />
               </div>
-              <h3 className="text-xl font-serif text-primary dark:text-white mb-3">Audio/Video Authentication</h3>
+              <h3 className="text-xl font-serif text-primary dark:text-white mb-3">Training & Capacity Building</h3>
               <p className="text-typography/70 text-sm">
-                Tampering detection and enhancement for multimedia evidence.
+                Industry-oriented training programs designed to build practical skills in forensic science.
               </p>
             </div>
           </Link>
