@@ -12,22 +12,22 @@ export const metadata: Metadata = {
 const openRoles = [
   {
     id: 1,
-    title: "Senior Digital Forensics Analyst",
-    department: "Cyber Division",
+    title: "Claim Analyst",
+    qualification: "BSc, MSc Forensics Science",
     type: "Full-Time",
     clearance: "Level 4 Clearance Required",
   },
   {
     id: 2,
-    title: "Questioned Document Examiner",
-    department: "Physical Evidence",
+    title: "Junior Forensics Expert",
+    qualification: "BSc, MSc Forensics Science",
     type: "Full-Time",
     clearance: "Level 3 Clearance Required",
   },
   {
     id: 3,
-    title: "Vault Security Architecture Lead",
-    department: "Infrastructure",
+    title: "Forensics Instructor",
+    qualification: "BSc, MSc Forensics Science",
     type: "Full-Time",
     clearance: "Level 5 Clearance Required",
   }
@@ -128,11 +128,11 @@ export default function CareersPage() {
                     {role.title}
                   </h3>
                   <div className="flex flex-wrap gap-2 md:gap-4 items-center text-xs tracking-wider uppercase font-bold">
-                    <span className="text-typography/70">{role.department}</span>
+                    <span className="text-typography/70">{role.qualification}</span>
                     <span className="hidden md:block w-1 h-1 rounded-full bg-secondary/30" />
                     <span className="text-accent">{role.type}</span>
-                    <span className="hidden md:block w-1 h-1 rounded-full bg-secondary/30" />
-                    <span className="text-red-500/80">{role.clearance}</span>
+                    {/* <span className="hidden md:block w-1 h-1 rounded-full bg-secondary/30" /> */}
+                    {/* <span className="text-red-500/80">{role.clearance}</span> */}
                   </div>
                 </div>
                 

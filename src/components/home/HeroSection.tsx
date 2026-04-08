@@ -10,7 +10,7 @@ export default function HeroSection() {
 const [openExpert, setOpenExpert] = useState(false);
 const [openPartner, setOpenPartner] = useState(false);
   return (
-    <section className="relative bg-background pt-10 pb-14 md:pt-30 md:pb-40 overflow-hidden">
+    <section className="relative bg-background pt-10 pb-14 md:pt-25 md:pb-35 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-secondary/10 to-transparent rounded-bl-[100px] -z-10 blur-3xl" />
 
@@ -19,16 +19,16 @@ const [openPartner, setOpenPartner] = useState(false);
         <div className="max-w-xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 border border-secondary/40 text-xs font-semibold tracking-widest text-primary dark:text-white uppercase mb-6">
             <div className="text-[12px] w-1.5 h-1.5 rounded-full bg-accent" />
-            Gold Standard Forensics
+           Forensics of the Future
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif text-primary dark:text-white leading-tight mb-6 mt-4">
-            Scientifically Proven.<br />
-            <span className="text-accent">Court Admissible.</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-primary dark:text-white leading-tight mb-6 mt-4">
+            Truth through Science.<br />
+            <span className="text-accent">Justice through Expertise.</span>
           </h1>
 
           <p className="text-lg text-typography/80 mb-10 leading-relaxed">
-            Prime Forensics delivers high-authority laboratory analysis and expert witness consultancy for complex legal disputes.
+            Prime Forensics delivers scientifically sound, legally admissible, and ethically driven solutions.
           </p>
 
           {/* Expert Profile Badge */}
@@ -46,15 +46,15 @@ const [openPartner, setOpenPartner] = useState(false);
               </div>
 
               <div>
-                <div className="text-[10px] font-bold tracking-wider text-accent uppercase mb-1">
-                  CHIEF EXPERT
+                <div className="text-[10px] font-bold tracking-wider text-accent uppercase">
+                  Founder
                 </div>
                 <div className="font-serif font-semibold text-primary dark:text-white text-lg whitespace-nowrap">
                   Dr. Jaskaran Singh
                 </div>
-                <div className="text-xs text-typography/70">
-                  PhD, Gold Medalist
-                </div>
+                {/* <div className="text-xs text-typography/70">
+                  Founder
+                </div> */}
               </div>
             </div>
 
@@ -107,15 +107,15 @@ const [openPartner, setOpenPartner] = useState(false);
                 </div>
               </div>
               <div>
-                <div className="text-[10px] font-bold tracking-wider text-accent uppercase mb-1">
-                  MANAGING PARTNER
+                <div className="text-[10px] font-bold tracking-wider text-accent uppercase">
+                  Co-Founder
                 </div>
                 <div className="font-serif font-semibold text-primary dark:text-white text-lg whitespace-nowrap">
                   Mr. Sahil Sharma
                 </div>
-                <div className="text-xs text-typography/70">
-                  M.Sc, B.Sc Forensic Science
-                </div>
+                {/* <div className="text-xs text-typography/70">
+                 Co Founder
+                </div> */}
                 {/* <div className="text-xs text-typography/70">
                   UGC-NET and FACT Qualified
                 </div> */}
@@ -189,12 +189,12 @@ const [openPartner, setOpenPartner] = useState(false);
             >
               Consult an Expert
             </Link>
-            <Link
+            {/* <Link
               href="/credentials"
               className="px-8 py-3.5 rounded-md font-medium border-2 border-primary/20 dark:border-white/20 hover:border-primary dark:hover:border-white text-primary dark:text-white transition-all text-center"
             >
               View Credentials
-            </Link>
+            </Link> */}
           </div>
         </div>
 
@@ -222,9 +222,9 @@ const [openPartner, setOpenPartner] = useState(false);
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/90 to-transparent p-6">
                 <div className="flex items-center gap-2 text-accent mb-1">
                   <ShieldCheck size={20} />
-                  <span className="font-bold text-lg">Global Forensic Standards</span>
+                  <span className="font-bold text-lg">Compliance & Commitment</span>
                 </div>
-                <p className="text-white/80 text-sm">Strict chain of custody protocols.</p>
+                <p className="text-white/80 text-sm">Integrity with Precision</p>
               </div>
             </div>
 
@@ -238,11 +238,11 @@ const [openPartner, setOpenPartner] = useState(false);
                 </div>
               </div> */}
               <div className="px-4">
-                <div className="text-[10px] font-bold tracking-widest text-typography/50 uppercase mb-1">
-                  CASES SOLVED
+                <div className="text-[12px] font-bold tracking-widest text-typography/50 uppercase ">
+                  Experience
                 </div>
-                <div className="font-serif font-bold text-3xl text-primary dark:text-white">
-                  1,000+
+                <div className="font-serif font-bold text-2xl text-primary dark:text-white">
+                  15+ Years
                 </div>
               </div>
             </div>
