@@ -20,7 +20,7 @@ export default function ServicesIndexPage() {
             Certified Scientific Capabilities
           </p>
           <h1 className="text-accent font-serif text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            Forensic Laboratory<br />Services
+            Forensic Services
           </h1>
           <p className="text-white/80 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
             Delivering court-admissible forensic insights to law firms, corporate boards, and government tribunals globally.
