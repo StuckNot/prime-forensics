@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, FileSignature, MonitorDot, Shield, Fingerprint, AudioLines, CheckCircle2 } from "lucide-react";
+import { ArrowRight, FileSignature, MonitorDot, Shield, Fingerprint, GraduationCap, CheckCircle2 } from "lucide-react";
 
 export default function ServicesGrid({ hideHeader = false }: { hideHeader?: boolean }) {
   return (
@@ -125,15 +125,15 @@ export default function ServicesGrid({ hideHeader = false }: { hideHeader?: bool
             </div>
           </Link>
 
-          {/* Card 5: Audio/Video Authentication */}
-          <Link href="/services/media-authentication" className="group relative rounded-2xl overflow-hidden md:col-span-1 bg-background dark:bg-[#0A101D] border border-secondary/20 shadow-sm flex items-center justify-center text-center p-8 hover:shadow-md transition-shadow">
+          {/* Card 5: Training & Capacity Building */}
+          <Link href="/services/training" className="group relative rounded-2xl overflow-hidden md:col-span-1 bg-background dark:bg-[#0A101D] border border-secondary/20 shadow-sm flex items-center justify-center text-center p-8 hover:shadow-md transition-shadow">
             <div className="flex flex-col items-center">
               <div className="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center mb-6 ring-8 ring-primary/5 group-hover:ring-primary/10 transition-all">
-                <AudioLines size={24} />
+                <GraduationCap size={24} />
               </div>
-              <h3 className="text-xl font-serif text-primary dark:text-white mb-3">Audio/Video Authentication</h3>
+              <h3 className="text-xl font-serif text-primary dark:text-white mb-3">Training & Capacity Building</h3>
               <p className="text-typography/70 text-sm">
-                Tampering detection and enhancement for multimedia evidence.
+                Professional forensic training for law enforcement, legal professionals, and corporate security teams.
               </p>
             </div>
           </Link>
