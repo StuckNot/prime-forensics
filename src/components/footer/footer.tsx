@@ -78,23 +78,28 @@ export default function Footer() {
 
           <ul className="space-y-4 text-sm text-white/80">
 
-            <li className="flex gap-3">
+            {/* <li className="flex gap-3">
               <MapPin size={18} className="mt-1 text-accent" />
               <span>
                 Level 4, Science & Tech Park,
                 <br />
                 Sector 62, Noida, India
               </span>
+            </li> */}
+
+               <li className="flex gap-3 items-center">
+              <Phone size={18} className="text-accent" />
+              <span>+91 82838 64936</span>
             </li>
 
             <li className="flex gap-3 items-center">
               <Phone size={18} className="text-accent" />
-              <span>+91 98765 43210</span>
+              <span>+91 99997 14103</span>
             </li>
 
             <li className="flex gap-3 items-center">
               <Mail size={18} className="text-accent" />
-              <span>lab@primeforensics.in</span>
+              <span>info@primeforensics.in</span>
             </li>
 
           </ul>
