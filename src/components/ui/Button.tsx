@@ -39,6 +39,16 @@ export default function Button({
   const styles = `${baseStyles} ${variantStyles} ${textColor} ${hoverBg} ${hoverText} ${className}`;
 
   if (href) {
+    const isExternal = href.startsWith("mailto:") || href.startsWith("tel:") || href.startsWith("http");
+
+    if (isExternal) {
+      return (
+        <a href={href} target={target} rel="noopener noreferrer" className={styles}>
+          {children}
+        </a>
+      );
+    }
+
     return (
       <Link href={href} target={target} className={styles}>
         {children}

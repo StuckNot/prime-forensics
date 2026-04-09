@@ -9,7 +9,8 @@ export const metadata: Metadata = {
   description: "Initiate a secure, confidential transmission with our forensic team.",
 };
 
-export default function ContactPage() {
+export default async function ContactPage({ searchParams }: { searchParams: Promise<{ service?: string }> }) {
+  const { service } = await searchParams;
   return (
     <div className="bg-background min-h-screen flex flex-col">
       
@@ -132,7 +133,7 @@ export default function ContactPage() {
 
             <div className="flex flex-col gap-2">
               <label className="text-xs font-bold uppercase tracking-widest text-typography/70">Inquiry Type</label>
-              <select className="bg-transparent border-b border-secondary/30 pb-2 text-primary dark:text-white focus:outline-none focus:border-accent transition-colors appearance-none outline-none">
+              <select defaultValue={service || "none"} className="bg-transparent border-b border-secondary/30 pb-2 text-primary dark:text-white focus:outline-none focus:border-accent transition-colors appearance-none outline-none">
                 <option value="none" className="text-black">Select forensic category...</option>
                 <option value="scientific" className="text-black">Scientific Forensic Analysis</option>
                 <option value="digital" className="text-black">Digital & Cyber Forensics</option>

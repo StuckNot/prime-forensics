@@ -329,7 +329,7 @@ export default function CorporateInvestigationsPage() {
           </p>
 
           <Button
-            href="/contact"
+            href="/contact?service=corporate"
             bgColor="bg-accent"
             textColor="text-primary"
             hoverBg="hover:brightness-110"

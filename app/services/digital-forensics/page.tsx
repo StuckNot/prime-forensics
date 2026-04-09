@@ -181,7 +181,7 @@ export default function DigitalForensicsPage() {
           </p>
           
           <Button 
-            href="/contact" 
+            href="/contact?service=digital"
             bgColor="bg-accent"
             textColor="text-primary"
             hoverBg="hover:brightness-110"
