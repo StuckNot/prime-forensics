@@ -452,7 +452,7 @@ export default function TrainingPage() {
           </p>
 
           <Button
-            href="/contact"
+            href="/contact?service=training"
             bgColor="bg-accent"
             textColor="text-primary"
             hoverBg="hover:brightness-110"

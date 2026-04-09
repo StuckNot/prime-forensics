@@ -321,7 +321,7 @@ export default function ScientificAnalysisPage() {
           </p>
 
           <Button
-            href="/contact"
+            href="/contact?service=scientific"
             bgColor="bg-accent"
             textColor="text-primary"
             hoverBg="hover:brightness-110"
