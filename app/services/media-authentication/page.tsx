@@ -32,7 +32,7 @@ export default function MediaAuthenticationPage() {
       {/* Admissibility Banner */}
       <div className="bg-secondary/10 border-b border-secondary/20 py-5 px-6 text-center">
         <p className="text-xs md:text-sm font-bold uppercase text-typography/80 tracking-widest flex items-center justify-center gap-3">
-          <span className="text-lg">⚖</span> FORENSIC MULTIMEDIA INTEGRITY STANDARDS COMPLIANT
+          FORENSIC MULTIMEDIA INTEGRITY STANDARDS COMPLIANT
         </p>
       </div>
 

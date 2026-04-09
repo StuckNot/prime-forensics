@@ -108,8 +108,7 @@ export default function TrainingPage() {
       {/* ──────────────────────────────────────────────────────── */}
       <div className="bg-secondary/10 border-b border-secondary/20 py-5 px-6 text-center">
         <p className="text-xs md:text-sm font-bold uppercase text-typography/80 tracking-widest flex items-center justify-center gap-3">
-          <span className="text-lg">🎓</span> ISO/IEC 17025 LABORATORY STANDARD
-          COMPLIANT TRAINING FACILITY
+           LABORATORY STANDARD COMPLIANT TRAINING FACILITY
         </p>
       </div>
 

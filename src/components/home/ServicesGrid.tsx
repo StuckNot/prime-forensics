@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, FileSignature, MonitorDot, Shield, Fingerprint, GraduationCap, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Microscope, MonitorDot, Briefcase, Fingerprint, GraduationCap, CheckCircle2 } from "lucide-react";
 
 export default function ServicesGrid({ hideHeader = false }: { hideHeader?: boolean }) {
   return (
@@ -30,22 +30,22 @@ export default function ServicesGrid({ hideHeader = false }: { hideHeader?: bool
         {/* Bento Grid layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[280px]">
           
-          {/* Card 1: Questioned Document */}
-          <Link href="/services/questioned-documents" className="group relative rounded-2xl overflow-hidden md:col-span-2 lg:col-span-2 bg-primary flex items-end">
+          {/* Card 1: Scientific Forensic Analysis */}
+          <Link href="/services/scientific-analysis" className="group relative rounded-2xl overflow-hidden md:col-span-2 lg:col-span-2 bg-primary flex items-end">
             <Image 
               src="/images/document-forensics.png" 
-              alt="Questioned Document Examination" 
+              alt="Scientific Forensic Analysis & Expert Consultation" 
               fill 
               className="object-cover opacity-50 group-hover:scale-105 transition-transform duration-700" 
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent" />
             <div className="relative p-8 w-full">
               <div className="w-10 h-10 rounded-lg bg-accent/20 text-accent flex items-center justify-center mb-4">
-                <FileSignature size={20} />
+                <Microscope size={20} />
               </div>
-              <h3 className="text-2xl font-serif text-white mb-2">Questioned Document Examination</h3>
+              <h3 className="text-2xl font-serif text-white mb-2">Scientific Forensic Analysis & Expert Consultation</h3>
               <p className="text-white/80 max-w-lg">
-                Expert handwriting and signature verification for legal disputes involving wills, cheques, and contracts.
+                Independent forensic examination and court-admissible expert opinions across multiple forensic domains.
               </p>
             </div>
           </Link>
@@ -77,31 +77,22 @@ export default function ServicesGrid({ hideHeader = false }: { hideHeader?: bool
             </div>
           </Link>
 
-          {/* Card 3: The Forensic Vault */}
-          <Link href="/services/forensic-vault" className=" relative rounded-2xl overflow-hidden bg-primary md:col-span-1 flex flex-col justify-between p-8 border border-secondary/20 shadow-lg group">
+          {/* Card 3: Corporate & Private Investigations */}
+          <Link href="/services/corporate-investigations" className=" relative rounded-2xl overflow-hidden bg-primary md:col-span-1 flex flex-col justify-between p-8 border border-secondary/20 shadow-lg group">
             <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -mr-10 -mt-10 transition-opacity group-hover:bg-accent/10" />
             
             <div className="relative z-10">
                <div className="w-10 h-10 rounded-lg bg-accent text-primary flex items-center justify-center mb-4">
-                <Shield size={20} />
+                <Briefcase size={20} />
               </div>
-              <h3 className="text-xl font-serif text-white mb-2">The Forensic Vault</h3>
+              <h3 className="text-xl font-serif text-white mb-2">Corporate & Private Investigations</h3>
               <p className="text-white/70 text-sm mb-6">
-                Secure, climate-controlled storage for sensitive evidence. Our vault ensures chain of custody integrity for physical and digital assets, accessible only to authorized personnel.
+                Confidential, professional, and result-driven investigations for corporate and individual clients. Background verification, internal probes, and due diligence.
               </p>
-              
-              {/* <ul className="space-y-2 mb-8">
-                {['24/7 Biometric Security', 'Fire & Waterproof', 'Automated Logging'].map((feature, i) => (
-                  <li key={i} className="flex items-center gap-2 text-sm text-accent/90">
-                    <CheckCircle2 size={16} />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul> */}
             </div>
             
             <div className="relative z-10 w-full py-2 px-3 rounded-lg flex items-center justify-center bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-bold tracking-wider uppercase transition-colors">
-              Access Protocols
+              Explore Services
             </div>
           </Link>
 

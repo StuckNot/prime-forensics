@@ -66,10 +66,10 @@ export default function InvestigatorsSection() {
                 Mr. Sahil Sharma
               </h3>
               <p className="text-[10px] text-accent tracking-[0.2em] uppercase mb-4 font-bold border-b border-secondary/20 pb-4 inline-block">
-                M.Sc. | Co- Founder
+                M.Sc. | Co-Founder
               </p>
               <p className="text-sm text-typography/70 leading-relaxed mb-8 font-medium">
-Bringing analytical precision and innovation to forensic practice, Mr. Sahil Sharma specializes in integrating scientific methodologies with modern investigative technologies. With over 3+ years of experience, he has contributed to multiple authored books, research publications, and published patents, reinforcing the firm’s commitment to scientific excellence and forensic innovation.              </p>
+                Bringing analytical precision and innovation to forensic practice, Mr. Sharma specializes in integrating scientific methodologies with modern investigative technologies. With 3+ years of experience, he has contributed to multiple authored books, research publications, and published patents, reinforcing the firm’s commitment to scientific excellence and forensic innovation.              </p>
               <div className="flex flex-wrap gap-3 items-center mt-auto">
                 <span className="flex items-center gap-1.5 text-[10px] font-bold uppercase text-typography/80 border border-secondary/20 px-3 py-1.5 rounded"><FileText className="w-3 h-3 text-accent"/> UGC-NET</span>
                 <span className="flex items-center gap-1.5 text-[10px] font-bold uppercase text-typography/80 border border-secondary/20 px-3 py-1.5 rounded"><Shield className="w-3 h-3 text-accent"/> FACT Qualified</span>

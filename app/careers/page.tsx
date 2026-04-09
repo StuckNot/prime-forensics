@@ -163,7 +163,7 @@ export default function CareersPage() {
           </p>
           
           <Button 
-            href="mailto:careers@primeforensics.in" 
+            href="mailto:info@primeforensics.in" 
             bgColor="bg-accent"
             textColor="text-primary"
             hoverBg="hover:brightness-110"
