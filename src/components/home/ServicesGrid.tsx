@@ -105,11 +105,11 @@ export default function ServicesGrid({ hideHeader = false }: { hideHeader?: bool
             </div>
           </Link>
 
-          {/* Card 4: Fraud & Forgery Detection */}
-          <Link href="/services/fraud-detection" className="group relative rounded-2xl overflow-hidden md:col-span-1 bg-primary flex items-end">
+          {/* Card 4: Insurance Fraud Investigation */}
+          <Link href="/services/insurance-fraud" className="group relative rounded-2xl overflow-hidden md:col-span-1 bg-primary flex items-end">
              <Image 
               src="/images/fingerprint-scan.png" 
-              alt="Fraud & Forgery Detection" 
+              alt="Insurance Fraud Investigation" 
               fill 
               className="object-cover opacity-60 mix-blend-screen group-hover:scale-110 transition-transform duration-1000" 
             />
@@ -118,9 +118,9 @@ export default function ServicesGrid({ hideHeader = false }: { hideHeader?: bool
                <div className="w-10 h-10 rounded-lg bg-accent/20 text-accent flex items-center justify-center mb-4">
                 <Fingerprint size={20} />
               </div>
-              <h3 className="text-xl font-serif text-white mb-2">Fraud & Forgery Detection</h3>
+              <h3 className="text-xl font-serif text-white mb-2">Insurance Fraud Investigation</h3>
               <p className="text-white/70 text-sm">
-                Detection of manipulated financial records, counterfeit currency, and identity theft.
+                Specialized forensic and field investigation to identify, prevent, and mitigate insurance fraud.
               </p>
             </div>
           </Link>
