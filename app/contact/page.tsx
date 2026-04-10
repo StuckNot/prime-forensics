@@ -9,7 +9,8 @@ export const metadata: Metadata = {
   description: "Initiate a secure, confidential transmission with our forensic team.",
 };
 
-export default function ContactPage() {
+export default async function ContactPage({ searchParams }: { searchParams: Promise<{ service?: string }> }) {
+  const { service } = await searchParams;
   return (
     <div className="bg-background min-h-screen flex flex-col">
       
@@ -56,7 +57,7 @@ export default function ContactPage() {
               Direct Channels
             </h3>
             
-            <div className="flex gap-6 items-start">
+            {/* <div className="flex gap-6 items-start">
               <div className="w-12 h-12 flex-shrink-0 bg-secondary/10 rounded-xl flex items-center justify-center text-primary dark:text-white border border-secondary/20">
                 <MapPin size={22} />
               </div>
@@ -68,7 +69,7 @@ export default function ContactPage() {
                   <span className="text-xs text-typography/50 mt-1 block">Hours: 0800 - 1800 (IST)</span>
                 </p>
               </div>
-            </div>
+            </div> */}
 
             <div className="flex gap-6 items-start">
               <div className="w-12 h-12 flex-shrink-0 bg-secondary/10 rounded-xl flex items-center justify-center text-primary dark:text-white border border-secondary/20">
@@ -77,8 +78,9 @@ export default function ContactPage() {
               <div>
                 <h4 className="font-bold text-primary dark:text-white uppercase tracking-wider text-sm mb-2">Forensic Hotline</h4>
                 <p className="text-typography/80 leading-relaxed">
-                  +91 98765 43210<br/>
-                  <span className="text-xs text-red-500 font-bold mt-1 block">24/7 EMERGENCY BREACH LINE</span>
+                  +91 82838 64936<br/>
+                  +91 99997 14103<br/>
+                  <span className="text-xs text-typography/50 mt-1 block">Available during business hours (IST)</span>
                 </p>
               </div>
             </div>
@@ -90,7 +92,7 @@ export default function ContactPage() {
               <div>
                 <h4 className="font-bold text-primary dark:text-white uppercase tracking-wider text-sm mb-2">Secure Uplink</h4>
                 <p className="text-typography/80 leading-relaxed">
-                  lab@primeforensics.in<br/>
+                  info@primeforensics.in<br/>
                   <span className="text-xs text-typography/50 mt-1 block">PGP Key available upon request</span>
                 </p>
               </div>
@@ -131,13 +133,13 @@ export default function ContactPage() {
 
             <div className="flex flex-col gap-2">
               <label className="text-xs font-bold uppercase tracking-widest text-typography/70">Inquiry Type</label>
-              <select className="bg-transparent border-b border-secondary/30 pb-2 text-primary dark:text-white focus:outline-none focus:border-accent transition-colors appearance-none outline-none">
+              <select defaultValue={service || "none"} className="bg-transparent border-b border-secondary/30 pb-2 text-primary dark:text-white focus:outline-none focus:border-accent transition-colors appearance-none outline-none">
                 <option value="none" className="text-black">Select forensic category...</option>
-                <option value="qde" className="text-black">Questioned Document Examination</option>
+                <option value="scientific" className="text-black">Scientific Forensic Analysis</option>
                 <option value="digital" className="text-black">Digital & Cyber Forensics</option>
-                <option value="vault" className="text-black">Forensic Vault Storage</option>
-                <option value="fraud" className="text-black">Fraud & Forgery Detection</option>
-                <option value="media" className="text-black">Audio/Video Authentication</option>
+                <option value="corporate" className="text-black">Corporate & Private Investigations</option>
+                <option value="insurance" className="text-black">Insurance Fraud Investigation</option>
+                <option value="training" className="text-black">Training & Capacity Building</option>
               </select>
             </div>
 

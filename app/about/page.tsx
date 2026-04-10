@@ -27,7 +27,7 @@ const page = () => {
         
         <div className="mb-12 flex items-center justify-between border-b border-secondary/20 pb-6">
           <h2 className="text-3xl font-serif text-primary dark:text-white flex items-center gap-3">
-             Training Archives <Camera className="text-accent w-6 h-6" />
+             Professional Highlights <Camera className="text-accent w-6 h-6" />
           </h2>
           <div className="hidden md:flex gap-4">
             <span className="text-xs font-bold uppercase tracking-wider text-accent border border-accent/30 px-3 py-1 bg-accent/5 rounded-full">All Photos</span>

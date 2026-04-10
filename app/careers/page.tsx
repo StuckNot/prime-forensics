@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { ShieldAlert, Microscope, GraduationCap, ChevronRight, Mail } from "lucide-react";
 import Footer from "@/src/components/footer/footer";
 import Button from "@/src/components/ui/Button";
@@ -16,6 +17,7 @@ const openRoles = [
     qualification: "BSc, MSc Forensics Science",
     type: "Full-Time",
     clearance: "Level 4 Clearance Required",
+    link: "https://forms.gle/nuWuqt24t87ry1C97",
   },
   {
     id: 2,
@@ -23,6 +25,7 @@ const openRoles = [
     qualification: "BSc, MSc Forensics Science",
     type: "Full-Time",
     clearance: "Level 3 Clearance Required",
+    link: "https://forms.gle/WMnJ64D1ecJMdcQy5",
   },
   {
     id: 3,
@@ -30,6 +33,7 @@ const openRoles = [
     qualification: "BSc, MSc Forensics Science",
     type: "Full-Time",
     clearance: "Level 5 Clearance Required",
+    link: "https://forms.gle/Aje55LgdmWuN45cz5",
   }
 ];
 
@@ -122,7 +126,7 @@ export default function CareersPage() {
 
           <div className="flex flex-col gap-4">
             {openRoles.map((role) => (
-              <div key={role.id} className="bg-background dark:bg-[#0A101D] p-6 md:p-8 rounded-xl border border-secondary/20 hover:border-accent/40 shadow-sm hover:shadow-md transition-all group flex flex-col md:flex-row items-start md:items-center justify-between cursor-pointer">
+              <Link href={role.link} target="_blank" key={role.id} className="bg-background dark:bg-[#0A101D] p-6 md:p-8 rounded-xl border border-secondary/20 hover:border-accent/40 shadow-sm hover:shadow-md transition-all group flex flex-col md:flex-row items-start md:items-center justify-between cursor-pointer">
                 <div>
                   <h3 className="text-xl font-bold text-primary dark:text-white group-hover:text-accent transition-colors mb-2">
                     {role.title}
@@ -131,8 +135,6 @@ export default function CareersPage() {
                     <span className="text-typography/70">{role.qualification}</span>
                     <span className="hidden md:block w-1 h-1 rounded-full bg-secondary/30" />
                     <span className="text-accent">{role.type}</span>
-                    {/* <span className="hidden md:block w-1 h-1 rounded-full bg-secondary/30" /> */}
-                    {/* <span className="text-red-500/80">{role.clearance}</span> */}
                   </div>
                 </div>
                 
@@ -141,7 +143,7 @@ export default function CareersPage() {
                      Apply <ChevronRight size={18} className="text-accent" />
                    </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
@@ -163,7 +165,7 @@ export default function CareersPage() {
           </p>
           
           <Button 
-            href="mailto:careers@primeforensics.in" 
+            href="mailto:info@primeforensics.in" 
             bgColor="bg-accent"
             textColor="text-primary"
             hoverBg="hover:brightness-110"

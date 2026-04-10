@@ -51,11 +51,11 @@ export default function Footer() {
           <h3 className="text-white font-semibold mb-4">SERVICES</h3>
 
           <ul className="space-y-3 text-sm">
-            <li><Link href="/services/questioned-documents" className="hover:text-white transition">Questioned Document Examination</Link></li>
+            <li><Link href="/services/scientific-analysis" className="hover:text-white transition">Scientific Forensic Analysis</Link></li>
             <li><Link href="/services/digital-forensics" className="hover:text-white transition">Digital & Cyber Forensics</Link></li>
-            <li><Link href="/services/forensic-vault" className="hover:text-white transition">The Forensic Vault</Link></li>
-            <li><Link href="/services/fraud-detection" className="hover:text-white transition">Fraud & Forgery Detection</Link></li>
-            <li><Link href="/services/media-authentication" className="hover:text-white transition">Audio/Video Authentication</Link></li>
+            <li><Link href="/services/corporate-investigations" className="hover:text-white transition">Corporate & Private Investigations</Link></li>
+            <li><Link href="/services/insurance-fraud" className="hover:text-white transition">Insurance Fraud Investigation</Link></li>
+            <li><Link href="/services/training" className="hover:text-white transition">Training & Capacity Building</Link></li>
           </ul>
         </div>
 
@@ -65,7 +65,6 @@ export default function Footer() {
 
           <ul className="space-y-3 text-sm">
             <li><Link href="/about" className="hover:text-white transition">About Us</Link></li>
-            <li><Link href="/gallery" className="hover:text-white transition">Gallery</Link></li>
             <li><Link href="/certifications" className="hover:text-white transition">Certifications</Link></li>
             <li><Link href="/careers" className="hover:text-white transition">Careers</Link></li>
             <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>
@@ -79,23 +78,28 @@ export default function Footer() {
 
           <ul className="space-y-4 text-sm text-white/80">
 
-            <li className="flex gap-3">
+            {/* <li className="flex gap-3">
               <MapPin size={18} className="mt-1 text-accent" />
               <span>
                 Level 4, Science & Tech Park,
                 <br />
                 Sector 62, Noida, India
               </span>
+            </li> */}
+
+               <li className="flex gap-3 items-center">
+              <Phone size={18} className="text-accent" />
+              <span>+91 82838 64936</span>
             </li>
 
             <li className="flex gap-3 items-center">
               <Phone size={18} className="text-accent" />
-              <span>+91 98765 43210</span>
+              <span>+91 99997 14103</span>
             </li>
 
             <li className="flex gap-3 items-center">
               <Mail size={18} className="text-accent" />
-              <span>lab@primeforensics.in</span>
+              <span>info@primeforensics.in</span>
             </li>
 
           </ul>
