@@ -42,8 +42,13 @@ export default function Button({
     const isExternal = href.startsWith("mailto:") || href.startsWith("tel:") || href.startsWith("http");
 
     if (isExternal) {
+      const isProtocol = href.startsWith("mailto:") || href.startsWith("tel:");
       return (
-        <a href={href} target={target} rel="noopener noreferrer" className={styles}>
+        <a
+          href={href}
+          {...(!isProtocol && { target, rel: "noopener noreferrer" })}
+          className={styles}
+        >
           {children}
         </a>
       );
