@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Footer from '@/src/components/footer/footer'
 import { Camera, Globe, Users, Award, ShieldCheck, PlayCircle } from "lucide-react";
 import Hero from '@/src/components/about/hero'
@@ -7,6 +8,11 @@ import InvestigatorsSection from '@/src/components/about/InvestigatorsSection'
 import AchievementsSection from '@/src/components/about/AchievementsSection'
 import AdvisoryBoardSection from '@/src/components/about/AdvisoryBoardSection'
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: "About Us | Prime Forensics",
+  description: "Learn about Prime Forensics, our elite team of investigators, and our mission to deliver unarguable truth through scientific excellence.",
+};
 
 const galleryImages = [
   { id: 1, title: "International Police Seminar", subtitle: "Dubai Police Force", aspect: "col-span-2 row-span-2 h-[450px]", src: "/images/international-conference-image.jpeg" },

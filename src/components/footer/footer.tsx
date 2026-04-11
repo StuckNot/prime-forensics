@@ -29,7 +29,7 @@ export default function Footer() {
             private individuals.
           </p>
 
-          <div className="flex gap-3">
+          {/* <div className="flex gap-3">
             <Link
               href="#"
               className="p-2 rounded-md bg-white/10 hover:bg-white/20 text-white transition"
@@ -43,7 +43,7 @@ export default function Footer() {
             >
               <Linkedin size={18} />
             </Link>
-          </div>
+          </div> */}
         </div>
 
         {/* Services */}
