@@ -12,9 +12,9 @@ const galleryImages = [
   { id: 1, title: "International Police Seminar", subtitle: "Dubai Police Force", aspect: "col-span-2 row-span-2 h-[450px]", src: "/images/international-conference-image.jpeg" },
   { id: 2, title: "Digital Extraction Masterclass", subtitle: "CBI Headquarters", aspect: "col-span-1 row-span-1 h-[215px]", src: "/images/discussion-ras-al-khaimah.jpeg" },
   { id: 3, title: "Forensic Keynote Address", subtitle: "Global Cyber Summit", aspect: "col-span-1 row-span-1 h-[215px]", src: "/images/shushant-singh-rajput-case.jpeg" },
-  { id: 4, title: "Laboratory Practicum", subtitle: "State Crime Branch", aspect: "col-span-1 row-span-2 h-[450px]", src: "/images/project-discussion-yanko-kolev.jpeg" },
+  { id: 4, title: "Laboratory Practicum", subtitle: "State Crime Branch", aspect: "col-span-2 row-span-2 h-[450px] md:col-span-1", src: "/images/project-discussion-yanko-kolev.jpeg" },
   { id: 5, title: "Document Analysis Training", subtitle: "Federal Investigators", aspect: "col-span-2 row-span-1 h-[215px]", src: "/images/training-haryana.jpeg" },
-  { id: 6, title: "Vault Architecture Review", subtitle: "National Security Agency", aspect: "col-span-1 row-span-1 h-[215px]", src: "/images/smart-policing-discussion.jpeg" },
+  { id: 6, title: "Vault Architecture Review", subtitle: "National Security Agency", aspect: "col-span-2 row-span-1 h-[215px]", src: "/images/smart-policing-discussion.jpeg" },
 ];
 
 const page = () => {
@@ -37,7 +37,7 @@ const page = () => {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:grid-rows-[auto]">
+        <div className="grid grid-cols md:grid-cols-3 gap-4 md:grid-rows-[auto]">
           {galleryImages.map((img) => (
             <div 
               key={img.id} 

@@ -56,15 +56,15 @@ const [openPartner, setOpenPartner] = useState(false);
                   Founder
                 </div> */}
               </div>
-            </div>
+            </div>  
 
             { openExpert && (
               <div
-                className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-xl p-4 transition-all duration-300"
+                className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-md p-4 animate-in fade-in duration-300"
                 onClick={() => setOpenExpert(false)}
               >
                 <div
-                  className="bg-background/90 dark:bg-[#0A101D]/90 backdrop-blur-md border border-accent/20 p-5 md:p-10 rounded-2xl shadow-2xl max-w-xl w-full relative pointer-events-auto animate-modal"
+                  className="bg-background dark:bg-[#0A101D] border border-accent/20 p-5 md:p-10 rounded-2xl shadow-2xl max-w-xl w-full relative transform scale-100 transition-all pointer-events-auto"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <button 
@@ -78,7 +78,7 @@ const [openPartner, setOpenPartner] = useState(false);
                     <div className="w-16 h-16 rounded-full border-2 border-accent/30 flex items-center justify-center text-white text-2xl font-serif bg-primary">JS</div>
                     <div>
                       <div className="font-serif text-2xl font-bold text-primary dark:text-white">Dr. Jaskaran Singh</div>
-                      <div className="text-[10px] font-bold tracking-widest text-accent uppercase mt-1">Chief Expert</div>
+                      <div className="text-[10px] font-bold tracking-widest text-accent uppercase mt-1">Founder</div>
                     </div>
                   </div>
 
@@ -124,11 +124,11 @@ const [openPartner, setOpenPartner] = useState(false);
           </div>
           {openPartner && (
               <div
-                className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-xl p-4 transition-all duration-300"
+                className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-md p-4 animate-in fade-in duration-300"
                 onClick={() => setOpenPartner(false)}
               >
                 <div
-                  className="bg-background/90 dark:bg-[#0A101D]/90 backdrop-blur-md border border-accent/20 p-5 md:p-10 rounded-2xl shadow-2xl max-w-xl w-full relative pointer-events-auto animate-modal"
+                  className="bg-background dark:bg-[#0A101D] border border-accent/20 p-5 md:p-10 rounded-2xl shadow-2xl max-w-xl w-full relative transform scale-100 transition-all pointer-events-auto"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <button 
@@ -142,7 +142,7 @@ const [openPartner, setOpenPartner] = useState(false);
                     <div className="w-16 h-16 rounded-full border-2 border-accent/30 flex items-center justify-center text-white text-2xl font-serif bg-accent">SS</div>
                     <div>
                       <div className="font-serif text-2xl font-bold text-primary dark:text-white">Mr. Sahil Sharma</div>
-                      <div className="text-[10px] font-bold tracking-widest text-accent uppercase mt-1">Managing Partner</div>
+                      <div className="text-[10px] font-bold tracking-widest text-accent uppercase mt-1">Co-Founder</div>
                     </div>
                   </div>
 
@@ -204,20 +204,19 @@ const [openPartner, setOpenPartner] = useState(false);
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl z-0" />
           <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-primary/5 rounded-full blur-3xl z-0" />
 
-          <div className="relative z-10 backdrop-blur-xl bg-background/90 dark:bg-[#0A101D]/90 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-2 border border-secondary/20 transform transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+          <div className="relative z-10 bg-background dark:bg-[#0A101D] rounded-2xl shadow-2xl p-2 border border-secondary/10 transform transition-transform duration-500 hover:-translate-y-2">
             <div className="absolute -top-4 -right-4 bg-accent text-white text-xs font-bold px-3 py-1.5 rounded shadow-lg z-20">
               Verified Lab
             </div>
 
-            <div className="relative h-64 xl:h-80 w-full rounded-xl overflow-hidden bg-primary mb-4">
+            <div className="relative h-64 w-full rounded-xl overflow-hidden bg-primary mb-4">
               {/* Lab image */}
               <Image
                 src="/images/hero-lab.png"
                 alt="Forensic Laboratory Equipment"
                 fill
-                className="object-cover object-center opacity-90 mix-blend-screen"
+                className="object-cover opacity-90 mix-blend-screen"
                 priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
               {/* Overlay with compliant text */}
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/90 to-transparent p-6">

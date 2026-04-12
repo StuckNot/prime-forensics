@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 
 export default async function ContactPage({ searchParams }: { searchParams: Promise<{ service?: string }> }) {
   const { service } = await searchParams;
+  
   return (
     <div className="bg-background min-h-screen flex flex-col">
       
@@ -31,7 +32,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
       </section>
 
       {/* Main Content Grid */}
-      <section className="container mx-auto max-w-7xl px-6 py-24 grid grid-cols-1 lg:grid-cols-2 gap-16 relative">
+      <section id='contact' className="container mx-auto max-w-7xl px-6 py-24 grid grid-cols-1 lg:grid-cols-2 gap-16 relative">
         
         {/* Left Side: Contact Information & Visuals */}
         <div className="flex flex-col gap-12">

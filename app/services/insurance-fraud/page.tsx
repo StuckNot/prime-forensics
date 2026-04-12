@@ -312,7 +312,7 @@ export default function InsuranceFraudPage() {
           </p>
 
           <Button
-            href="/contact?service=insurance"
+            href="/contact?service=insurance#contact"
             bgColor="bg-accent"
             textColor="text-primary"
             hoverBg="hover:brightness-110"
