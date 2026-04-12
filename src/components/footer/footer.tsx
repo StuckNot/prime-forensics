@@ -29,7 +29,7 @@ export default function Footer() {
             private individuals.
           </p>
 
-          <div className="flex gap-3">
+          {/* <div className="flex gap-3">
             <Link
               href="#"
               className="p-2 rounded-md bg-white/10 hover:bg-white/20 text-white transition"
@@ -43,7 +43,7 @@ export default function Footer() {
             >
               <Linkedin size={18} />
             </Link>
-          </div>
+          </div> */}
         </div>
 
         {/* Services */}
@@ -65,7 +65,6 @@ export default function Footer() {
 
           <ul className="space-y-3 text-sm">
             <li><Link href="/about" className="hover:text-white transition">About Us</Link></li>
-            <li><Link href="/certifications" className="hover:text-white transition">Certifications</Link></li>
             <li><Link href="/careers" className="hover:text-white transition">Careers</Link></li>
             <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>
             <li><Link href="/privacy-policy" className="hover:text-white transition">Privacy Policy</Link></li>

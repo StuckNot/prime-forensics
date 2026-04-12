@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Mail, Phone, MapPin, ShieldCheck, LockKeyhole } from "lucide-react";
+import { Mail, Phone, MapPin, ShieldCheck } from "lucide-react";
 import Footer from "@/src/components/footer/footer";
-import Button from "@/src/components/ui/Button";
+import ContactForm from "@/src/components/contact/ContactForm";
 
 export const metadata: Metadata = {
   title: "Secure Contact | Prime Forensics",
@@ -101,72 +101,9 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
           </div>
         </div>
 
-        {/* Right Side: High-Trust HTML Form */}
-        <div className="bg-background dark:bg-[#0A101D] p-8 md:p-12 rounded-2xl border border-secondary/20 shadow-lg relative">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full blur-3xl -mr-10 -mt-10" />
-          
-          <div className="flex items-center gap-3 mb-8 relative z-10">
-            <LockKeyhole className="text-accent" size={24} />
-            <h2 className="text-2xl font-serif text-primary dark:text-white">Encrypted Transmission Box</h2>
-          </div>
+        {/* Right Side: Contact Form (Client Component) */}
+        <ContactForm defaultService={service} />
 
-          <form className="space-y-6 relative z-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="flex flex-col gap-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-typography/70">First Name</label>
-                <input type="text" className="bg-transparent border-b border-secondary/30 pb-2 text-primary dark:text-white focus:outline-none focus:border-accent transition-colors" placeholder="John" />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-typography/70">Last Name</label>
-                <input type="text" className="bg-transparent border-b border-secondary/30 pb-2 text-primary dark:text-white focus:outline-none focus:border-accent transition-colors" placeholder="Doe" />
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label className="text-xs font-bold uppercase tracking-widest text-typography/70">Email Address (Official)</label>
-              <input type="email" className="bg-transparent border-b border-secondary/30 pb-2 text-primary dark:text-white focus:outline-none focus:border-accent transition-colors" placeholder="j.doe@lawfirm.com" />
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label className="text-xs font-bold uppercase tracking-widest text-typography/70">Organization / Law Firm (Optional)</label>
-              <input type="text" className="bg-transparent border-b border-secondary/30 pb-2 text-primary dark:text-white focus:outline-none focus:border-accent transition-colors" placeholder="Prime Legal Associates" />
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label className="text-xs font-bold uppercase tracking-widest text-typography/70">Inquiry Type</label>
-              <select defaultValue={service || "none"} className="bg-transparent border-b border-secondary/30 pb-2 text-primary dark:text-white focus:outline-none focus:border-accent transition-colors appearance-none outline-none">
-                <option value="none" className="text-black">Select forensic category...</option>
-                <option value="scientific" className="text-black">Scientific Forensic Analysis</option>
-                <option value="digital" className="text-black">Digital & Cyber Forensics</option>
-                <option value="corporate" className="text-black">Corporate & Private Investigations</option>
-                <option value="insurance" className="text-black">Insurance Fraud Investigation</option>
-                <option value="training" className="text-black">Training & Capacity Building</option>
-              </select>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label className="text-xs font-bold uppercase tracking-widest text-typography/70">Secure Message Details</label>
-              <textarea rows={4} className="bg-secondary/5 border border-secondary/20 p-4 rounded-lg text-primary dark:text-white focus:outline-none focus:border-accent focus:bg-transparent resize-none transition-colors" placeholder="Describe the nature of your legal requirement. Do not include sensitive personally identifiable information (PII) in this initial form." />
-            </div>
-
-            <div className="pt-4">
-              <Button 
-                href="#" 
-                bgColor="bg-accent"
-                textColor="text-primary"
-                hoverBg="hover:brightness-110"
-                className="w-full py-4 shadow-lg text-sm tracking-wider uppercase font-bold flex justify-center items-center"
-              >
-                Initiate Secure Transmission
-              </Button>
-            </div>
-            
-            <p className="text-[10px] text-center text-typography/40 tracking-widest uppercase mt-4">
-              Protected by military-grade SSL encryption protocols.
-            </p>
-          </form>
-
-        </div>
       </section>
 
       <Footer />

@@ -18,11 +18,11 @@ const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://primeforensics.placeholder.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://primeforensics.in";
 const companyData = {
   name: process.env.NEXT_PUBLIC_COMPANY_NAME || "Prime Forensics",
-  phone: process.env.NEXT_PUBLIC_COMPANY_PHONE || "+1-000-000-0000",
-  address: process.env.NEXT_PUBLIC_COMPANY_ADDRESS || "Placeholder Address",
+  phone: process.env.NEXT_PUBLIC_COMPANY_PHONE || "+91 82838 64936",
+  address: process.env.NEXT_PUBLIC_COMPANY_ADDRESS || "Delhi, India",
 };
 
 export const metadata: Metadata = {

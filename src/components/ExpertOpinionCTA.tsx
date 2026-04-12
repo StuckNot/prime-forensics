@@ -40,7 +40,7 @@ export default function ExpertOpinionCTA() {
             Initiate Case Review
           </Button>
 
-          <Button
+          {/* <Button
             href="#"
             variant="outline"
             textColor="text-white"
@@ -49,7 +49,7 @@ export default function ExpertOpinionCTA() {
             className="w-full sm:w-auto border-white/30 font-bold text-sm tracking-widest uppercase px-10 py-4 backdrop-blur-sm hover:border-white transition-all flex justify-center"
           >
             Download Corporate Dossier
-          </Button>
+          </Button> */}
 
         </div>
       </div>
